@@ -1,10 +1,10 @@
 ---
-title: "hVastatrix"
 output:
   html_document:
     df_print: paged
     includes:
       in_header: header.html
-      after_body: hVastatrix.html
+      before_body: hVastatrix.html
+      after_body: citate.html
     css: styles.css
 ---
