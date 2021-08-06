@@ -236,6 +236,24 @@ a:link, a:visited {
 a:hover, a:active {
   background-color: #E16684;
 }
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
 </style>
 
 <link rel="stylesheet" href="styles.css" type="text/css" />
@@ -271,11 +289,18 @@ Aldus PageMaker, el cual incluye versiones de Lorem Ipsum.</p>
         <p style="text-align: center; text-decoration: underline;text-shadow: 2px 2px 5px #E16684;font-size: 30px;">Specie</p>
   </a>
 </div>
-<div>
+<div class="dropdown">
+  <span>
   <a target="_blank" style="width: 250px;height: 250px;inline-block;">
         <p style="text-align: center;text-shadow: 2px 2px 5px red;font-size: 70px;">2</p>
         <p style="text-align: center; text-decoration: underline;text-shadow: 2px 2px 5px #E16684;font-size: 30px;">Genomes</p>
   </a>
+  </span>
+  <div class="dropdown-content">
+    <a href="about.html">
+        <i>Hemileia vastatrix</i>
+    </a>
+  </div>
 </div>
 <div>
   <a target="_blank" style="width: 250px;height: 250px;inline-block;">
