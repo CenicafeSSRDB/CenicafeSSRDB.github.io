@@ -6,4 +6,5 @@ output:
     includes:
       in_header: header.html
       after_body: hVastatrix.html
+    css: styles.css
 ---
