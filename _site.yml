@@ -1,6 +1,7 @@
 name: "Cenicafe_DB"
 output_dir: "."
 navbar:
+  icon: ~/images/logo-cenicafe.png
   title: "Cenicafé DB"
   left:
     - text: "Hemileia vastatrix"

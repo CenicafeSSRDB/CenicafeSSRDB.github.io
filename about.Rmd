@@ -1,5 +1,9 @@
 ---
 title: "hVastatrix"
+output:
+  html_document:
+    df_print: paged
+    includes:
+      in_header: header.html
+      after_body: hVastatrix.html
 ---
-
-#Hemileia vastatrix
