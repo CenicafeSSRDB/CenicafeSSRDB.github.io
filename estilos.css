@@ -1,3 +1,4 @@
+
 a.button {
     -webkit-appearance: button;
     -moz-appearance: button;
@@ -28,7 +29,6 @@ a:active {
   color: blue;
 }
 
-
 .header{font-family: Verdana,Arial,sans-serif;
   font-size: 15px;
   color: #000000;
@@ -42,11 +42,6 @@ a:active {
   color: #ffffff;
 }
 
-
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
 
 .dropdown-content {
   display: none;
