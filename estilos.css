@@ -1,5 +1,21 @@
-body {font-family: Verdana,Arial,sans-serif;
-font-size: 15px;
-color: #000000;
-text-align: justify;
-background-color: #ffffff;}
+.header{font-family: Verdana,Arial,sans-serif;
+  font-size: 15px;
+  color: #000000;
+  text-align: justify;
+  background-color: #9c0028;}
+
+.CeniTitle{
+  font-family: 'Abril Fatface', cursive;
+  font-weight: bold;
+  font-size: 30px;
+  color: #ffffff;
+}
+
+a.button {
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+
+    text-decoration: none;
+    color: initial;
+}

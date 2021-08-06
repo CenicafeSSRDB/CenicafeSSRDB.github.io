@@ -5,7 +5,7 @@ output:
     df_print: paged
     includes:
       in_header: header.html
-      after_body: quantity.html
+      after_body: quantity.html, after_body: citate.html
     css: styles.css
 ---
 
