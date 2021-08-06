@@ -1,9 +1,17 @@
-name: "my-website"
+name: "Cenicafe_DB"
 output_dir: "."
 navbar:
-  title: "My Website"
+  title: "Cenicafé DB"
   left:
-    - text: "Home"
-      href: index.html
-    - text: "About"
+    - text: "Hemileia vastatrix"
       href: about.html
+  right:
+    - icon: glyphicon glyphicon-home
+      href: index.html
+output:
+  html_document:
+    theme: spacelab
+    highlight: textmate
+    include:
+      after_body: citate.html
+    css: styles.css
