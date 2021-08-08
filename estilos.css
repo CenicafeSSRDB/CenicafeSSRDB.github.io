@@ -29,12 +29,14 @@ a:active {
   color: #9c0028;
 }
 
+/*Colores de la barra superior */
 .header{font-family: Verdana,Arial,sans-serif;
   font-size: 15px;
   color: #000000;
   text-align: justify;
   background-color: #9c0028;}
-
+  
+/* Titulo cenicafe */
 .CeniTitle{
   font-family: 'Abril Fatface', cursive;
   font-weight: normal;
@@ -46,12 +48,15 @@ a:active {
   display: block;
 }
 
+/* division pàagina quantity, divide los tres div de forma horizontal en partes iguales */
 #container {
   display: flex;                  /* establish flex container */
   flex-direction: row;            /* default value; can be omitted */
   flex-wrap: nowrap;              /* default value; can be omitted */
   justify-content: space-between; /* switched from default (flex-start, see below) */
 }
+
+/* Tamaño de los contenedores*/
 #container > div {
   width: 350px;
   height: 150px;
