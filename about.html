@@ -249,35 +249,7 @@ pre code {
 </div>
 
 
-<pre class="r"><code>  library(ggplot2)
-  library(dplyr)</code></pre>
-<pre class="r"><code>  data &lt;- DataBase_Markers_CENHV</code></pre>
-<pre class="r"><code>  #Tabla de frecuencias por tipo
-  type &lt;- ftable(data$SSR_type)
-  typeData &lt;- as.data.frame(type)
-  #secuencias frecuentes
-  seque &lt;- ftable(data$SSR_summary_sequence)
-  sequeData &lt;- as.data.frame(seque)
-  sequeMain &lt;- sequeData[sequeData$Freq &gt; 2,]</code></pre>
-<pre class="r"><code>  # Pie plot
-  typeData$fraction = typeData$Freq / sum(typeData$Freq)
-  
-  typeData$ymax = cumsum(typeData$fraction)
-  
-  typeData$ymin = c(0, head(typeData$ymax, n=-1))
-  
-  ggplot(typeData, aes(ymax=ymax, ymin=ymin, xmax=4, xmin=3, fill=Var1)) +
-     geom_rect() +
-     coord_polar(theta=&quot;y&quot;) + # Try to remove that to understand how the chart is built initially
-     xlim(c(2, 4)) # Try to remove that to see how to make a pie chart</code></pre>
 <p><img src="about_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
-<pre class="r"><code>  #Barplot
-
-  sequeMain$Var1 = with(sequeMain, reorder(Var1, Freq, .fun=&#39;length&#39;))
-  
-  ggplot(sequeMain, aes(x=Var1, y=Freq, fill=Var1)) + 
-    geom_col() +
-    xlab(&quot;Sequences&quot;) + ylab (&quot;Frequency&quot;) + ggtitle(&quot;Most Frequent Repeats&quot;)</code></pre>
 <p><img src="about_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
 
 <div style="float: right;" >

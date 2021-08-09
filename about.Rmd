@@ -8,16 +8,16 @@ output:
       after_body: citate.html
     css: styles.css
 ---
-```{r}
+```{r, include=FALSE}
   library(ggplot2)
   library(dplyr)
 ```
 
-```{r}
+```{r, include=FALSE}
   data <- DataBase_Markers_CENHV
 ```
 
-```{r}
+```{r, include=FALSE}
   #Tabla de frecuencias por tipo
   type <- ftable(data$SSR_type)
   typeData <- as.data.frame(type)
@@ -28,7 +28,7 @@ output:
   
 ```
 
-```{r}
+```{r, echo=FALSE}
   # Pie plot
   typeData$fraction = typeData$Freq / sum(typeData$Freq)
   
@@ -42,7 +42,7 @@ output:
      xlim(c(2, 4)) # Try to remove that to see how to make a pie chart
 ```
 
-```{r}
+```{r, echo=FALSE}
   #Barplot
 
   sequeMain$Var1 = with(sequeMain, reorder(Var1, Freq, .fun='length'))
