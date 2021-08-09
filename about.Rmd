@@ -10,6 +10,7 @@ output:
 ---
 ```{r}
   library(ggplot2)
+  library(dplyr)
 ```
 
 ```{r}
@@ -20,14 +21,15 @@ output:
   #Tabla de frecuencias por tipo
   type <- ftable(data$SSR_type)
   typeData <- as.data.frame(type)
-  typeData
   #secuencias frecuentes
-  #seque <- table(data$SSR_summary_sequence)
-  #seque
+  seque <- ftable(data$SSR_summary_sequence)
+  sequeData <- as.data.frame(seque)
+  sequeMain <- sequeData[sequeData$Freq > 2,]
   
 ```
 
 ```{r}
+  # Pie plot
   typeData$fraction = typeData$Freq / sum(typeData$Freq)
   
   typeData$ymax = cumsum(typeData$fraction)
@@ -41,8 +43,11 @@ output:
 ```
 
 ```{r}
+  #Barplot
+
+  sequeMain$Var1 = with(sequeMain, reorder(Var1, Freq, .fun='length'))
   
-  #p <- ggplot(data, aes(x = SSR_sequence > 1)) + geom_bar(fill="blue")
-  
-  #p + xlab("Sequences") + ylab ("Frequency") + ggtitle("SRR Sequences") + theme_bw()
+  ggplot(sequeMain, aes(x=Var1, y=Freq, fill=Var1)) + 
+    geom_col() +
+    xlab("Sequences") + ylab ("Frequency") + ggtitle("Most Frequent Repeats")
 ```

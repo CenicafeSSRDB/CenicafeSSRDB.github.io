@@ -249,21 +249,18 @@ pre code {
 </div>
 
 
-<pre class="r"><code>  library(ggplot2)</code></pre>
+<pre class="r"><code>  library(ggplot2)
+  library(dplyr)</code></pre>
 <pre class="r"><code>  data &lt;- DataBase_Markers_CENHV</code></pre>
 <pre class="r"><code>  #Tabla de frecuencias por tipo
   type &lt;- ftable(data$SSR_type)
   typeData &lt;- as.data.frame(type)
-  typeData</code></pre>
-<div data-pagedtable="false">
-<script data-pagedtable-source type="application/json">
-{"columns":[{"label":["Var1"],"name":[1],"type":["fct"],"align":["left"]},{"label":["Freq"],"name":[2],"type":["int"],"align":["right"]}],"data":[{"1":"complex","2":"51"},{"1":"di","2":"125"},{"1":"hexa","2":"6"},{"1":"penta","2":"8"},{"1":"tetra","2":"13"},{"1":"tri","2":"95"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
-  </script>
-</div>
-<pre class="r"><code>  #secuencias frecuentes
-  #seque &lt;- table(data$SSR_summary_sequence)
-  #seque</code></pre>
-<pre class="r"><code>  typeData$fraction = typeData$Freq / sum(typeData$Freq)
+  #secuencias frecuentes
+  seque &lt;- ftable(data$SSR_summary_sequence)
+  sequeData &lt;- as.data.frame(seque)
+  sequeMain &lt;- sequeData[sequeData$Freq &gt; 2,]</code></pre>
+<pre class="r"><code>  # Pie plot
+  typeData$fraction = typeData$Freq / sum(typeData$Freq)
   
   typeData$ymax = cumsum(typeData$fraction)
   
@@ -274,9 +271,14 @@ pre code {
      coord_polar(theta=&quot;y&quot;) + # Try to remove that to understand how the chart is built initially
      xlim(c(2, 4)) # Try to remove that to see how to make a pie chart</code></pre>
 <p><img src="about_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
-<pre class="r"><code>  #p &lt;- ggplot(data, aes(x = SSR_sequence &gt; 1)) + geom_bar(fill=&quot;blue&quot;)
+<pre class="r"><code>  #Barplot
+
+  sequeMain$Var1 = with(sequeMain, reorder(Var1, Freq, .fun=&#39;length&#39;))
   
-  #p + xlab(&quot;Sequences&quot;) + ylab (&quot;Frequency&quot;) + ggtitle(&quot;SRR Sequences&quot;) + theme_bw()</code></pre>
+  ggplot(sequeMain, aes(x=Var1, y=Freq, fill=Var1)) + 
+    geom_col() +
+    xlab(&quot;Sequences&quot;) + ylab (&quot;Frequency&quot;) + ggtitle(&quot;Most Frequent Repeats&quot;)</code></pre>
+<p><img src="about_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
 
 <div style="float: right;" >
 <br>
