@@ -28,7 +28,7 @@ output:
   
 ```
 
-```{r, echo=FALSE}
+```{r, echo=FALSE, fig.height = 4, fig.align ='center'}
   # Pie plot
   typeData$fraction = typeData$Freq / sum(typeData$Freq)
   
@@ -42,7 +42,7 @@ output:
      xlim(c(2, 4)) # Try to remove that to see how to make a pie chart
 ```
 
-```{r, echo=FALSE}
+```{r, echo=FALSE, fig.width = 6, fig.height = 4, fig.align ='center'}
   #Barplot
 
   sequeMain$Var1 = with(sequeMain, reorder(Var1, Freq, .fun='length'))
