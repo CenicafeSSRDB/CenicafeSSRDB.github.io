@@ -9,6 +9,40 @@ output:
     css: styles.css
 ---
 ```{r}
-  d <- DataBase_Markers_CENHV
-  d
+  library(ggplot2)
+```
+
+```{r}
+  data <- DataBase_Markers_CENHV
+```
+
+```{r}
+  #Tabla de frecuencias por tipo
+  type <- ftable(data$SSR_type)
+  typeData <- as.data.frame(type)
+  typeData
+  #secuencias frecuentes
+  #seque <- table(data$SSR_summary_sequence)
+  #seque
+  
+```
+
+```{r}
+  typeData$fraction = typeData$Freq / sum(typeData$Freq)
+  
+  typeData$ymax = cumsum(typeData$fraction)
+  
+  typeData$ymin = c(0, head(typeData$ymax, n=-1))
+  
+  ggplot(typeData, aes(ymax=ymax, ymin=ymin, xmax=4, xmin=3, fill=Var1)) +
+     geom_rect() +
+     coord_polar(theta="y") + # Try to remove that to understand how the chart is built initially
+     xlim(c(2, 4)) # Try to remove that to see how to make a pie chart
+```
+
+```{r}
+  
+  #p <- ggplot(data, aes(x = SSR_sequence > 1)) + geom_bar(fill="blue")
+  
+  #p + xlab("Sequences") + ylab ("Frequency") + ggtitle("SRR Sequences") + theme_bw()
 ```
