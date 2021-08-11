@@ -11,21 +11,26 @@ output:
 ```{r, include=FALSE}
   library(ggplot2)
   library(dplyr)
+  library(viridisLite)
 ```
 
 ```{r, include=FALSE}
   data <- DataBase_Markers_CENHV
+  rhg_cols <- c( "#370617", "#6A040F", "#771C19", "#AA3929", "#E25033", "#F27314", "#F8A31B",
+               "#E2C59F", "#B6C5CC", "#8E9CA3", "#556670", "#000000", "#03071E")
 ```
 
 ```{r, include=FALSE}
   #Tabla de frecuencias por tipo
   type <- ftable(data$SSR_type)
   typeData <- as.data.frame(type)
+  names(typeData)[2] = "Frecuencia"
+  typeData = arrange(typeData, desc(Frecuencia))
   #secuencias frecuentes
   seque <- ftable(data$SSR_summary_sequence)
   sequeData <- as.data.frame(seque)
-  sequeMain <- sequeData[sequeData$Freq > 2,]
-  
+  sequeData = arrange(sequeData, desc(Freq))
+  sequeMain <- top_n( sequeData, 10, Freq)
 ```
 
 :::: {style="display: flex;"}
@@ -62,7 +67,7 @@ output:
 
 ```{r, echo=FALSE, fig.height = 4, fig.align ='center'}
   # Pie plot
-  typeData$fraction = typeData$Freq / sum(typeData$Freq)
+  typeData$fraction = typeData$Frecuencia / sum(typeData$Frecuencia)
   
   typeData$ymax = cumsum(typeData$fraction)
   
@@ -70,10 +75,11 @@ output:
   
   ggplot(typeData, aes(ymax=ymax, ymin=ymin, xmax=4, xmin=3, fill=Var1)) +
      geom_rect() +
+     scale_fill_manual(values = rhg_cols)+
      coord_polar(theta="y") + # Try to remove that to understand how the chart is built initially
      xlim(c(2, 4)) + # Try to remove that to see how to make a pie chart
-    ggtitle("Motiv Size Distribution") +
-    theme_minimal()
+     ggtitle("Motiv Size Distribution") +
+     theme_minimal()
 ```
 :::
 
@@ -81,13 +87,15 @@ output:
 
 ```{r, echo=FALSE, fig.width = 6, fig.height = 4, fig.align ='center'}
   #Barplot
+sequeMain$Var1 = with(sequeMain, reorder(Var1, -Freq, .fun='length'))
 
-  sequeMain$Var1 = with(sequeMain, reorder(Var1, Freq, .fun='length'))
-  
-  ggplot(sequeMain, aes(x=Var1, y=Freq, fill=Var1)) + 
+sequeMain%>%
+    ggplot(aes(x=Var1, y=Freq, fill=Var1)) + 
     geom_col() +
+    scale_fill_manual(values = rhg_cols)+
     xlab("Sequences") + ylab ("Frequency") + ggtitle("Most Frequent Repeats") +
     theme_minimal()
+    theme(legend.position = "none",axis.text.x = element_text(angle = 35, hjust = 1))
 ```
 
 :::
