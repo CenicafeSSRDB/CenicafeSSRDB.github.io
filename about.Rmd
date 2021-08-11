@@ -39,7 +39,8 @@ output:
   ggplot(typeData, aes(ymax=ymax, ymin=ymin, xmax=4, xmin=3, fill=Var1)) +
      geom_rect() +
      coord_polar(theta="y") + # Try to remove that to understand how the chart is built initially
-     xlim(c(2, 4)) # Try to remove that to see how to make a pie chart
+     xlim(c(2, 4)) + # Try to remove that to see how to make a pie chart
+    theme_minimal()
 ```
 
 ```{r, echo=FALSE, fig.width = 6, fig.height = 4, fig.align ='center'}
@@ -49,5 +50,6 @@ output:
   
   ggplot(sequeMain, aes(x=Var1, y=Freq, fill=Var1)) + 
     geom_col() +
-    xlab("Sequences") + ylab ("Frequency") + ggtitle("Most Frequent Repeats")
+    xlab("Sequences") + ylab ("Frequency") + ggtitle("Most Frequent Repeats") +
+    theme_minimal()
 ```
