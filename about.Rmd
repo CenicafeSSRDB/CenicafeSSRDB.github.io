@@ -28,6 +28,20 @@ output:
   
 ```
 
+:::: {style="display: flex;"}
+
+::: {}
+
+Botones
+
+:::
+
+::: {}
+
+:::: {style="display: flex;"}
+
+::: {}
+
 ```{r, echo=FALSE, fig.height = 4, fig.align ='center'}
   # Pie plot
   typeData$fraction = typeData$Freq / sum(typeData$Freq)
@@ -42,6 +56,9 @@ output:
      xlim(c(2, 4)) + # Try to remove that to see how to make a pie chart
     theme_minimal()
 ```
+:::
+
+::: {}
 
 ```{r, echo=FALSE, fig.width = 6, fig.height = 4, fig.align ='center'}
   #Barplot
@@ -53,3 +70,11 @@ output:
     xlab("Sequences") + ylab ("Frequency") + ggtitle("Most Frequent Repeats") +
     theme_minimal()
 ```
+
+:::
+
+::::
+
+:::
+
+::::
