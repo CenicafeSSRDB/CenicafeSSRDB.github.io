@@ -32,7 +32,25 @@ output:
 
 ::: {}
 
-Botones
+```{r, echo=FALSE}
+  microsatellites <- 1
+  microsatellites
+```
+
+```{r, echo=FALSE}
+  GcoveredMB <- 2
+  GcoveredMB
+```
+
+```{r, echo=FALSE}
+  GcoveredPer <- 3
+  GcoveredPer
+```
+
+```{r, echo=FALSE}
+  SSRperMB <- 4
+  SSRperMB
+```
 
 :::
 
@@ -54,6 +72,7 @@ Botones
      geom_rect() +
      coord_polar(theta="y") + # Try to remove that to understand how the chart is built initially
      xlim(c(2, 4)) + # Try to remove that to see how to make a pie chart
+    ggtitle("Motiv Size Distribution") +
     theme_minimal()
 ```
 :::
