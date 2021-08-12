@@ -11,11 +11,12 @@ output:
 ```{r, include=FALSE}
   library(ggplot2)
   library(dplyr)
+  library(readxl)
   library(viridisLite)
 ```
 
 ```{r, include=FALSE}
-  data <- DataBase_Markers_CENHV
+  data <- read_excel("Base_de_datos/DataBase_Markers_CENHV.xlsx")
   rhg_cols <- c( "#370617", "#6A040F", "#771C19", "#AA3929", "#E25033", "#F27314", "#F8A31B",
                "#E2C59F", "#B6C5CC", "#8E9CA3", "#556670", "#000000", "#03071E")
 ```
