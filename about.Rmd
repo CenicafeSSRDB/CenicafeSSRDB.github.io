@@ -38,25 +38,11 @@ output:
 
 ::: {}
 
-```{r, echo=FALSE}
-  microsatellites <- 1
-  microsatellites
+````{=html}
+```{r, echo=FALSE, results='asis'}
+xfun::file_string('botones.html')
 ```
 
-```{r, echo=FALSE}
-  GcoveredMB <- 2
-  GcoveredMB
-```
-
-```{r, echo=FALSE}
-  GcoveredPer <- 3
-  GcoveredPer
-```
-
-```{r, echo=FALSE}
-  SSRperMB <- 4
-  SSRperMB
-```
 
 :::
 
