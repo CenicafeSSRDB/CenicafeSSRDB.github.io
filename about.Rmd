@@ -13,6 +13,7 @@ output:
   library(dplyr)
   library(readxl)
   library(viridisLite)
+  library(plotly)
 ```
 
 ```{r, include=FALSE}
@@ -38,17 +39,27 @@ output:
 
 ::: {}
 
-````{=html}
-```{r, echo=FALSE, results='asis'}
-xfun::file_string('botones.html')
+```{r, class.source="watch-out", echo=FALSE}
+  Microsatellites<-"Microsatellites"
+  Microsatellites
 ```
 
+```{r, class.source="watch-out", echo=FALSE}
+  GcoveredMB <- "Genome covered MB"
+  GcoveredMB
+```
+
+```{r, class.source="watch-out", echo=FALSE}
+  GcoveredPer <- "Genome covered"
+  GcoveredPer
+```
+
+```{r, class.source="watch-out", echo=FALSE}
+  SSRperMB <- "SSR MB"
+  SSRperMB
+```
 
 :::
-
-::: {}
-
-:::: {style="display: flex;"}
 
 ::: {}
 
@@ -68,6 +79,7 @@ xfun::file_string('botones.html')
      ggtitle("Motiv Size Distribution") +
      theme_minimal()
 ```
+
 :::
 
 ::: {}
@@ -82,12 +94,29 @@ sequeMain%>%
     scale_fill_manual(values = rhg_cols)+
     xlab("Sequences") + ylab ("Frequency") + ggtitle("Most Frequent Repeats") +
     theme_minimal()
-    theme(legend.position = "none",axis.text.x = element_text(angle = 35, hjust = 1))
+    #theme(legend.position = "none",axis.text.x = element_text(angle = 35, hjust = 1))
 ```
 
-:::
-
-::::
+```{r, echo=FALSE, fig.width = 6, fig.height = 4, fig.align ='center'}
+fig <- plot_ly(
+    x = sequeMain$Var1,
+    y = sequeMain$Freq,
+    type = 'bar',
+    text = sequeMain$Var1,
+  )
+fig <- fig %>% layout(
+    title = 'Most Frequent Repeats',
+    xaxis = list(
+      type = 'category',
+      title = 'Sequences'
+    ),
+    yaxis = list(
+      title = 'Frequency',
+      range = c(0,16)
+    )
+  )
+fig
+```
 
 :::
 
