@@ -10,10 +10,11 @@ output:
 ```{r, include=FALSE}
   library(ggplot2)
   library(dplyr)
+  library(readxl)
 ```
 
 ```{r, include=FALSE}
-  data <- DataBase_Markers_CENHV
+  data <- read_excel("Base_de_datos/DataBase_Markers_CENHV.xlsx")
 ```
 
 ```{r, echo=FALSE}

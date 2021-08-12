@@ -11,9 +11,9 @@
 
 
 
-<title>index.knit</title>
+<title>index.utf8</title>
 
-<script src="site_libs/header-attrs-2.9/header-attrs.js"></script>
+<script src="site_libs/header-attrs-2.7/header-attrs.js"></script>
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/journal.min.css" rel="stylesheet" />
@@ -65,21 +65,20 @@
 
 <div class="header">
   
-  <table style="width:80%; align:center;">
-    <tr>
-      <td style="text-align: right;">
-      <img src="images/Logo-Cenicafe.svg" width="100" height="100" alt="">
-      </td>
-      <td class="CeniTitle">
+  <div id="container">
+    <div style="width:15%;">
+      <img src="images/Logo-Cenicafe.svg" alt="">
+    </div>
+    <div class="CeniTitle">
       <p>Cenicafé DB</p>
-      </td>
-      <td  style="align: right;">
-        <a href="index.html" class="button">
-          <img src="images/home-button.svg" width="80" height="80" alt="Home">
+    </div>
+    <div style="width: 7%;">
+      <a href="index.html" class="button">
+        <img src="images/home-button.svg" alt="Home">
       </a>
-      </td>
-    </tr>
-  </table>
+    </div>
+  </div>
+
 </div>
 
 <style type="text/css">
@@ -306,13 +305,15 @@ Aldus PageMaker, el cual incluye versiones de Lorem Ipsum.</p>
 </div>
 
 <div id="container">
-<div>
+<div style="height: 150px; width: 30%;">
+  <button onclick="myFunction()" class="dropbtn">
   <a target="_blank" style="width: 250px;height: 250px;inline-block;">
         <p style="text-align: center;text-shadow: 2px 2px 5px red;font-size: 70px;">1</p>
         <p style="text-align: center; text-decoration: underline;text-shadow: 2px 2px 5px #E16684;font-size: 30px;">Specie</p>
   </a>
+  </button>
 </div>
-<div class="dropdown">
+<div class="dropdown" style="height: 150px; width: 30%;">
   <button onclick="myFunction()" class="dropbtn">
   <a target="_blank" style="width: 250px;height: 250px;inline-block;">
         <p style="text-align: center;text-shadow: 2px 2px 5px red;font-size: 70px;">2</p>
@@ -325,11 +326,13 @@ Aldus PageMaker, el cual incluye versiones de Lorem Ipsum.</p>
     </a>
   </div>
 </div>
-<div>
+<div style="height: 150px; width: 30%;">
+  <button onclick="myFunction()" class="dropbtn">
   <a target="_blank" style="width: 250px;height: 250px;inline-block;">
     <p style="text-align: center;text-shadow: 2px 2px 5px red;font-size: 70px;">X</p>
     <p style="text-align: center; text-decoration: underline;text-shadow: 2px 2px 5px #E16684;font-size: 30px;">Microsatellites</p>
   </a>
+  </button>
 </div>
 </div>
 
@@ -368,9 +371,11 @@ window.onclick = function(event) {
 
 
 
-<div style="float: right;" >
+<div style="padding: 15px;" >
 <br>
-<p>Copyright &copy; 2021 CENICAFÉ, Inc. All rights reserved.</p>
+  <div style="position: absolute;">
+    <p>Copyright &copy; 2021 CENICAFÉ, Inc. All rights reserved.</p>
+  </div>
 </div>
 
 
