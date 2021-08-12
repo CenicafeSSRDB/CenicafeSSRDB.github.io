@@ -38,11 +38,25 @@ a:active {
   background-color: #740404;}
   
 /* Titulo cenicafe */
+
+@font-face {
+  font-family: "ITC Gorilla";
+  src: url("itc-gorilla.otf");
+}
+
+
 .CeniTitle{
-  font-family: 'Abril Fatface', cursive;
+  font-family: 'ITC Gorilla', bold;
   font-weight: normal;
   font-size: 50px;
   color: #ffffff;
+  display: table;
+}
+
+.CeniTitle > div{
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
 }
 
 .dropdown:hover .dropdown-content {
