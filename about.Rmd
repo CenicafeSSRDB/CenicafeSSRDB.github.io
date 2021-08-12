@@ -85,24 +85,15 @@ output:
 ::: {}
 
 ```{r, echo=FALSE, fig.width = 6, fig.height = 4, fig.align ='center'}
-  #Barplot
+#Barplot
+
 sequeMain$Var1 = with(sequeMain, reorder(Var1, -Freq, .fun='length'))
 
-sequeMain%>%
-    ggplot(aes(x=Var1, y=Freq, fill=Var1)) + 
-    geom_col() +
-    scale_fill_manual(values = rhg_cols)+
-    xlab("Sequences") + ylab ("Frequency") + ggtitle("Most Frequent Repeats") +
-    theme_minimal()
-    #theme(legend.position = "none",axis.text.x = element_text(angle = 35, hjust = 1))
-```
-
-```{r, echo=FALSE, fig.width = 6, fig.height = 4, fig.align ='center'}
 fig <- plot_ly(
     x = sequeMain$Var1,
     y = sequeMain$Freq,
     type = 'bar',
-    text = sequeMain$Var1,
+    marker = list(color = rhg_cols),
   )
 fig <- fig %>% layout(
     title = 'Most Frequent Repeats',
