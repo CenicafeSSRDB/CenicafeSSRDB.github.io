@@ -6,7 +6,7 @@ a.button {
     
     text-decoration: none;
     color: initial;
-    border-radius: 20px;
+    border-radius: 10px;
 }
 
 /* unvisited link */
@@ -16,7 +16,7 @@ a:link {
 
 /* visited link */
 a:visited {
-  color: #9c0028;
+  color: #740404;
 }
 
 /* mouse over link */
@@ -26,7 +26,7 @@ a:hover {
 
 /* selected link */
 a:active {
-  color: #9c0028;
+  color: #740404;
 }
 
 /*HEAD*/
@@ -35,7 +35,7 @@ a:active {
   font-size: 15px;
   color: #000000;
   text-align: justify;
-  background-color: #9c0028;}
+  background-color: #740404;}
   
 /* Titulo cenicafe */
 .CeniTitle{
@@ -56,12 +56,6 @@ a:active {
   flex-direction: row;            /* default value; can be omitted */
   flex-wrap: nowrap;              /* default value; can be omitted */
   justify-content: space-between; /* switched from default (flex-start, see below) */
-}
-
-/* Tamaño de los contenedores*/
-#container > div {
-  width: 350px;
-  height: 150px;
 }
 
 /*PAG2*/
