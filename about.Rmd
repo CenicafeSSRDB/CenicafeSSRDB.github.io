@@ -26,8 +26,10 @@ output:
   #Tabla de frecuencias por tipo
   type <- ftable(data$SSR_type)
   typeData <- as.data.frame(type)
+  names(typeData)[1] = "Tipo"
   names(typeData)[2] = "Frecuencia"
   typeData = arrange(typeData, desc(Frecuencia))
+  
   #secuencias frecuentes
   seque <- ftable(data$SSR_summary_sequence)
   sequeData <- as.data.frame(seque)
@@ -65,19 +67,19 @@ output:
 
 ```{r, echo=FALSE, fig.height = 4, fig.align ='center'}
   # Pie plot
-  typeData$fraction = typeData$Frecuencia / sum(typeData$Frecuencia)
-  
-  typeData$ymax = cumsum(typeData$fraction)
-  
-  typeData$ymin = c(0, head(typeData$ymax, n=-1))
-  
-  ggplot(typeData, aes(ymax=ymax, ymin=ymin, xmax=4, xmin=3, fill=Var1)) +
-     geom_rect() +
-     scale_fill_manual(values = rhg_cols)+
-     coord_polar(theta="y") + # Try to remove that to understand how the chart is built initially
-     xlim(c(2, 4)) + # Try to remove that to see how to make a pie chart
-     ggtitle("Motiv Size Distribution") +
-     theme_minimal()
+  pie <- plot_ly(typeData, labels = ~Tipo, values = ~Frecuencia, type = 'pie',
+                 textposition = 'inside',
+                 textinfo = 'label+percent',
+                 insidetextfont = list(color = '#FFFFFF'),
+                 hoverinfo = 'text',
+                 text = ~paste(Frecuencia, 'of', Tipo),
+                 marker = list(colors = rhg_cols,
+                      line = list(color = '#FFFFFF', width = 1)),
+                 showlegend = FALSE)
+  pie <- pie %>% layout(title = 'Motiv Size Distribution',
+         xaxis = list(showgrid = FALSE, zeroline = FALSE, showticklabels = FALSE),
+         yaxis = list(showgrid = FALSE, zeroline = FALSE, showticklabels = FALSE))
+  pie
 ```
 
 :::
@@ -89,24 +91,25 @@ output:
 
 sequeMain$Var1 = with(sequeMain, reorder(Var1, -Freq, .fun='length'))
 
-fig <- plot_ly(
+barras <- plot_ly(
     x = sequeMain$Var1,
     y = sequeMain$Freq,
     type = 'bar',
     marker = list(color = rhg_cols),
   )
-fig <- fig %>% layout(
+barras <- barras %>% layout(
     title = 'Most Frequent Repeats',
     xaxis = list(
       type = 'category',
-      title = 'Sequences'
+      title = 'Sequences',
+      tickangle = -45
     ),
     yaxis = list(
       title = 'Frequency',
       range = c(0,16)
     )
   )
-fig
+barras
 ```
 
 :::
