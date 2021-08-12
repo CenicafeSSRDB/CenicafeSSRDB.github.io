@@ -65,7 +65,7 @@ output:
 
 ::: {}
 
-```{r, echo=FALSE, fig.height = 4, fig.align ='center'}
+```{r, echo=FALSE, warning=FALSE, fig.height = 4, fig.align ='center'}
   # Pie plot
   m <- list(
   l = 50,
@@ -97,7 +97,7 @@ output:
 
 ::: {}
 
-```{r, echo=FALSE, fig.width = 6, fig.height = 4, fig.align ='center'}
+```{r, echo=FALSE, warning=FALSE, fig.width = 6, fig.height = 4, fig.align ='center'}
 #Barplot
   n <- list(
   l = 50,
