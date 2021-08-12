@@ -67,6 +67,14 @@ output:
 
 ```{r, echo=FALSE, fig.height = 4, fig.align ='center'}
   # Pie plot
+  m <- list(
+  l = 50,
+  r = 50,
+  b = 100,
+  t = 100,
+  pad = 4
+  )  
+
   pie <- plot_ly(typeData, labels = ~Tipo, values = ~Frecuencia,
                  textposition = 'inside',
                  textinfo = 'percent',
@@ -81,6 +89,7 @@ output:
   pie <- pie %>% layout(title = 'Motiv Size Distribution',
          xaxis = list(showgrid = FALSE, zeroline = FALSE, showticklabels = FALSE),
          yaxis = list(showgrid = FALSE, zeroline = FALSE, showticklabels = FALSE))
+  pie <- pie %>% layout(autosize = F, width = 400, margin = m)
   pie
 ```
 
@@ -90,6 +99,13 @@ output:
 
 ```{r, echo=FALSE, fig.width = 6, fig.height = 4, fig.align ='center'}
 #Barplot
+  n <- list(
+  l = 50,
+  r = 50,
+  b = 100,
+  t = 100,
+  pad = 4
+  )  
 
 sequeMain$Var1 = with(sequeMain, reorder(Var1, -Freq, .fun='length'))
 
@@ -111,6 +127,7 @@ barras <- barras %>% layout(
       range = c(0,16)
     )
   )
+barras <- barras %>% layout(autosize = F, width = 500, height = 400, margin = n)
 barras
 ```
 
