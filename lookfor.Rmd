@@ -15,8 +15,9 @@ output:
 
 ```{r, include=FALSE}
   data <- read_excel("Base_de_datos/DataBase_Markers_CENHV.xlsx")
+  datos <- data.frame(Marker_ID = data$Marker_ID, Coordinates = data$Coordinates_Hv33_genome, Size = data$SSR_size, Forward_Primer = data$`FORWARD_PRIMER1₍5'-3')`, Reverse_Primer =data$`REVERSE_PRIMER1₍5'-3')`)
 ```
 
 ```{r, echo=FALSE}
-  data
+  datos
 ```
