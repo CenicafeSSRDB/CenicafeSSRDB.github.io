@@ -7,3 +7,4 @@ output:
     include:
       after_body: citate.html
     css: styles.css
+runtime: shiny

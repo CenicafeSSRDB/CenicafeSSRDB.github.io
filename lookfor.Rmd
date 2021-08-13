@@ -47,14 +47,13 @@ inputPanel(
 
 ```{r}
 mydata <- reactive({
-  filter(datos, Size %in% input$Size)
+  datos %>%
+    filter(Size %in% input$Size, Type %in% input$Type)
   })
 ```
 
 ```{r}
 renderDT({
-  datatable(mydata(), filter = 'top') %>%
-    formatCurrency(4:5, digits = 0) %>%
-    formatCurrency(6, currency = "", digits = 0)
+  datatable(mydata(), filter = 'top')
 })
 ```
