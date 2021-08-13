@@ -97,7 +97,7 @@ output:
 
 ::: {}
 
-```{r, echo=FALSE, warning=FALSE, fig.width = 6, fig.height = 4, fig.align ='center'}
+```{r barplot, echo=FALSE, warning=FALSE, fig.width = 6, fig.height = 4, fig.align ='center'}
 #Barplot
   n <- list(
   l = 50,

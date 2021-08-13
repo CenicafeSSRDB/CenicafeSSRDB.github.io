@@ -16,23 +16,29 @@ knitr::opts_chunk$set(
 )
 ```
 
-```{r}
+```{r libraries}
 library(ggplot2)
 library(shiny)
 ```
 
-```{r}
+```{r filtering}
 d <- read_excel("Base_de_datos/DataBase_Markers_CENHV.xlsx")
 datos <- data.frame(Marker_ID=d$Marker_ID, Coordinates=d$Coordinates_Hv33_genome, Type=d$SSR_type, Size=d$SSR_size, Forward_Primer=d$FORWARD_PRIMER1, Reverse_Primer=d$REVERSE_PRIMER1)
 ```
 
 ```{r}
 inputPanel(
-  shiny::selectInput("Size", label = "Size:", choices = c("All",
-                         unique(as.character(datos$Size))) )
+  shiny::selectInput("input$Size",
+                     label = "Size:", 
+                     choices = c("All", unique(as.character(datos$Size))),
+                     multiple = TRUE)
 )
 inputPanel(
-  shiny::selectInput("Type", label = "Type:", choices = c("All",
+  shiny::selectInput("input$Type", label = "Type:", choices = c("All",
                          unique(as.character(datos$Type))) )
 )
+```
+
+```{r}
+
 ```
