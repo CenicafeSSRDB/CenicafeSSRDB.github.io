@@ -114,6 +114,7 @@ barras <- plot_ly(
     y = sequeMain$Freq,
     type = 'bar',
     marker = list(color = rhg_cols),
+    hovertemplate = paste('Frequency %{x}: <br>%{y}')
   )
 barras <- barras %>% layout(
     title = 'Most Frequent Repeats',
