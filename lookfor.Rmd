@@ -6,7 +6,6 @@ output:
       in_header: header.html
       after_body: citate.html
     css: styles.css
-runtime: shiny
 ---
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(
@@ -17,43 +16,10 @@ knitr::opts_chunk$set(
 
 ```{r libraries}
 library(ggplot2)
-library(shiny)
+library(ggedit)
 library(dplyr)
 library(readxl)
-library(viridisLite)
-library(plotly)
 library(DT)
 ```
 
-```{r filtering}
-d <- read_excel("Base_de_datos/DataBase_Markers_CENHV.xlsx")
-datos <- data.frame(Marker_ID=d$Marker_ID, Coordinates=d$Coordinates_Hv33_genome, Type=d$SSR_type, Size=d$SSR_size, Forward_Primer=d$FORWARD_PRIMER1, Reverse_Primer=d$REVERSE_PRIMER1)
-```
-
-```{r}
-inputPanel(
-  shiny::selectInput("input$Size",
-                     label = "Size:", 
-                     choices = c("All", unique(as.character(datos$Size))),
-                     multiple = TRUE)
-)
-inputPanel(
-  shiny::selectInput("input$Type", 
-                     label = "Type:", 
-                     choices = c("All", unique(as.character(datos$Type))),
-                     multiple = TRUE)
-)
-```
-
-```{r}
-mydata <- reactive({
-  datos %>%
-    filter(Size %in% input$Size, Type %in% input$Type)
-  })
-```
-
-```{r}
-renderDT({
-  datatable(mydata(), filter = 'top')
-})
-```
+<iframe src="https://cafedc.shinyapps.io/cafedcgithub/"></iframe>
