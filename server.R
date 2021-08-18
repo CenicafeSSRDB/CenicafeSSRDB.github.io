@@ -4,7 +4,7 @@ library(dplyr)
 library(readxl)
 library(DT)
 
-d <- read.csv("~/Base_de_datos/DataBase_Markers_CENHV.csv", header=TRUE)
+d <- read_excel("/Base_de_datos/DataBase_Markers_CENHV.xlsx")
 datos <- data.frame(Marker_ID=d$Marker_ID, Coordinates=d$Coordinates_Hv33_genome, Size=d$SSR_size,
                   Type=d$SSR_type, Forward_Primer=d$FORWARD_PRIMER1, Reverse_Primer=d$REVERSE_PRIMER1)
 
