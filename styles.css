@@ -1,3 +1,11 @@
 blockquote {
   font-style: italic
 }
+
+iframe:focus {
+  outline: none;
+}
+
+iframe[seamless] {
+  display: block;
+}
