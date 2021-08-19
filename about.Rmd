@@ -14,6 +14,7 @@ output:
   library(readxl)
   library(viridisLite)
   library(plotly)
+  library(htmltools)
 ```
 
 ```{r cargando, include=FALSE}
@@ -41,25 +42,7 @@ output:
 
 ::: {}
 
-```{r, class.source="watch-out", echo=FALSE}
-  Microsatellites<-"Microsatellites"
-  Microsatellites
-```
-
-```{r, class.source="watch-out", echo=FALSE}
-  GcoveredMB <- "Genome covered MB"
-  GcoveredMB
-```
-
-```{r, class.source="watch-out", echo=FALSE}
-  GcoveredPer <- "Genome covered"
-  GcoveredPer
-```
-
-```{r, class.source="watch-out", echo=FALSE}
-  SSRperMB <- "SSR MB"
-  SSRperMB
-```
+<iframe src="https://cafedc.shinyapps.io/looking/" style="border:none;"></iframe>
 
 :::
 
