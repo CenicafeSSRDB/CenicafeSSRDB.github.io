@@ -42,7 +42,7 @@ output:
 
 ::: {}
 
-<iframe src="https://cafedc.shinyapps.io/looking/" style="border:none;"></iframe>
+<iframe src="https://cafedc.shinyapps.io/looking/" width="200" height="600" style="border:none;"></iframe>
 
 :::
 
