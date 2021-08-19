@@ -6,6 +6,6 @@ output:
       in_header: header.html
       before_body: quantity.html
       after_body: citate.html
-    css: styles.css
+    css: estilos.css
 ---
 
