@@ -73,3 +73,12 @@ a:active {
 }
 
 /*PAG2*/
+.pag2{
+  color: white;
+  border-style: none;
+  background-attachment: fixed;
+  padding: 10px;
+  margin: none;
+  text-align: center;
+  background: url(images/satelite.png);
+}

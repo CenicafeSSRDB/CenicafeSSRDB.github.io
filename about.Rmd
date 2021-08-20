@@ -21,6 +21,7 @@ output:
   data <- read_excel("Base_de_datos/DataBase_Markers_CENHV.xlsx")
   rhg_cols <- c( "#370617", "#6A040F", "#771C19", "#AA3929", "#E25033", "#F27314", "#F8A31B",
                "#E2C59F", "#B6C5CC", "#8E9CA3", "#556670", "#000000", "#03071E")
+
 ```
 
 ```{r, include=FALSE}
@@ -35,7 +36,6 @@ output:
   seque <- ftable(data$SSR_summary_sequence)
   sequeData <- as.data.frame(seque)
   sequeData = arrange(sequeData, desc(Freq))
-  sequeMain <- top_n( sequeData, 10, Freq)
 ```
 
 :::: {style="display: flex;"}
@@ -91,7 +91,8 @@ output:
   pad = 4
   )  
 
-sequeMain$Var1 = with(sequeMain, reorder(Var1, -Freq, .fun='length'))
+sequeData$Var1 = with(sequeData, reorder(Var1, -Freq, .fun='length'))
+sequeMain <- top_n( sequeData, 10, Freq)
 
 barras <- plot_ly(
     x = sequeMain$Var1,
