@@ -14,7 +14,7 @@ body {
   grid-auto-rows: minmax(200px, auto);
   gap: 20px;
   padding: 20px;
-  grid-auto-flow: dense;
+  grid-auto-flow:dense;
   
   max-width: 998px;
   margin: 0 auto;
@@ -26,7 +26,7 @@ body {
 .a-no-btn {
     background:white;
     padding-left:20px;
-    padding-right:80px;
+    padding-right:20px;
     height:100%;
     display:inline-block;
     position:relative;
@@ -49,14 +49,13 @@ body {
 .a-btn{
     background:white;
     padding-left:20px;
-    padding-right:80px;
+    padding-right:20px;
     height:100%;
     display:inline-block;
     position:relative;
     box-shadow: 2px 2px 5px #999;
     border-radius: 10px;
     float:left;
-    clear:both;
     margin:10px 0px;
     overflow:hidden;
     text-decoration: none;
@@ -74,11 +73,17 @@ body {
 }
 
 .a-btn-text{
-    display:block;
     font-size:18px;
+    word-wrap: break-word;
     white-space:nowrap;
     text-shadow:0px 1px 1px #5d81ab;
     color:#740404;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 200px;
 }
 
 .a-btn-slide-text{
@@ -93,7 +98,7 @@ body {
     font-size:18px;
     white-space:nowrap;
     font-style: italic;
-    text-align:left;
+    text-align:center;
     text-indent:10%;
     overflow:hidden;
     box-shadow: 0 2px 0 #999;
@@ -109,13 +114,16 @@ body {
     top:0px;
     height:100%;
     width:30px;
-    border-left:1px solid #5d81ab;
+    border-left:1px solid #a0a6ad;
 }
 
 .link-text {
+  position: absolute;
   text-decoration: none;
   color: white;
-  word-wrap: break-word;
+  font-size: 0.9vw;
+  left: 0;
+  top: 50%;
 }
 
 .a-btn-icon-right span{
@@ -147,7 +155,7 @@ body {
 .a-btn:active{
     position:relative;
     top:1px;
-    background:#5d81ab;
+    background:#898f96;
     border-color:#80a9da;
 }
 
