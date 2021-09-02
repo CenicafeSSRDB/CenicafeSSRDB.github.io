@@ -11,6 +11,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
 
 <title>Navbar</title>
 
@@ -18,36 +19,30 @@
   
 </style>
 
-<link rel="stylesheet" href="estilos.css" type="text/css" />
+<link rel="stylesheet" href="nav.css" type="text/css" />
 
 </head>
 
-
 <body>
-
-<div class="header">
-  
-  <div id="container">
-    <div style="width:15%;">
-      <img src="images/Logo-Cenicafe.svg" alt="">
-    </div>
-    <div class="CeniTitle" style="width: 70%;">
-      <div>
-      <p>Cenicafé DB</p>
-      </div>
-    </div>
-    <div style="width: 7%;">
-      <a href="javascript:history.back()">
-        <img src="images/back.png" alt="Back">
+  <header class="header">
+    <nav class="nav">
+      <svg src="images/Logo-Cenicafe.svg" alt="" width="100">
+      <a href"#" class="logo nav-link">
+          Cenicafé DB
       </a>
-    </div>
-    <div style="width: 7%;">
-      <a href="index.html" class="button">
-        <img src="images/home-button.svg" alt="Home">
-      </a>
-    </div>
-  </div>
-
-</div>
-
+      <ul class="nav-menu">
+        <li class="nav-menu-item">
+          <a href="javascript:history.back()" class="nav-menu-link nav-link">
+            <i class="fas fa-chevron-left"></i>
+          </a>
+        </li>
+        <li class="nav-menu-item">
+          <a href="index.html" class="nav-menu-link nav-link">
+            <i class="fas fa-home"></i>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
 </body>
+</html>

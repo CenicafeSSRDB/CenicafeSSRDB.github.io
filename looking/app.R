@@ -14,15 +14,16 @@ library(ggedit)
 library(dplyr)
 library(readxl)
 library(DT)
+library(writexl)
 
 #Database upload
 data <- read_excel("DataBase_Markers_CENHV.xlsx")
 
 
 #Primers DataTables
-primer1 <- data.frame(Marker_ID=data$Marker_ID, Forward_Primer=data$FORWARD_PRIMER1, T_For=data$Tm_F1, Size_For=data$size_F1, Reverse_Primer=data$REVERSE_PRIMER1, T_Rev=data$Tm_R1, Size_Rev=data$size_R1)
-primer2 <- data.frame(Marker_ID=data$Marker_ID, Forward_Primer=data$FORWARD_PRIMER2, T_For=data$Tm_F2, Size_For=data$size_F2, Reverse_Primer=data$REVERSE_PRIMER2, T_Rev=data$Tm_R2, Size_Rev=data$size_R2)
-primer3 <- data.frame(Marker_ID=data$Marker_ID, Forward_Primer=data$FORWARD_PRIMER3, T_For=data$Tm_F3, Size_For=data$size_F3, Reverse_Primer=data$REVERSE_PRIMER3, T_Rev=data$Tm_R3, Size_Rev=data$size_R3)
+primer1 <- data.frame(Marker_ID=data$Marker_ID, Forward_Primer=data$FORWARD_PRIMER1, T_For=data$Tm_F1, Size_For=data$size_F1, Reverse_Primer=data$REVERSE_PRIMER1, T_Rev=data$Tm_R1, Size_Rev=data$size_R1, Product_Size=data$PRODUCT1_size)
+primer2 <- data.frame(Marker_ID=data$Marker_ID, Forward_Primer=data$FORWARD_PRIMER2, T_For=data$Tm_F2, Size_For=data$size_F2, Reverse_Primer=data$REVERSE_PRIMER2, T_Rev=data$Tm_R2, Size_Rev=data$size_R2, Product_Size=data$PRODUCT2_size)
+primer3 <- data.frame(Marker_ID=data$Marker_ID, Forward_Primer=data$FORWARD_PRIMER3, T_For=data$Tm_F3, Size_For=data$size_F3, Reverse_Primer=data$REVERSE_PRIMER3, T_Rev=data$Tm_R3, Size_Rev=data$size_R3, Product_Size=data$PRODUCT3_size)
 
 #DataBase adjustment
 datos <- data.frame(Marker_ID=data$Marker_ID, Coordinates=data$Coordinates_Hv33_genome, SSR_Size=data$SSR_size, Sequence=data$SSR_summary_sequence,
@@ -46,7 +47,9 @@ ui <- dashboardPage(
                 menuItem("Primers options", tabName = "Primer_options", icon = icon("vial")),
                 selectizeInput('primers', 'Primers', choices = c("Primer 1", "Primer 2", "Primer 3"),
                                options = list(placeholder = 'Type to choose a primer',
-                               onInitialize = I('function() { this.setValue(""); }')))
+                               onInitialize = I('function() { this.setValue(""); }'))),
+                # Button
+                downloadButton("downloadData", "Download")
             )
         ),
         # Body.
@@ -56,33 +59,47 @@ ui <- dashboardPage(
                     solidHeader = T,
                     width = 12,
                     collapsible = T,
-                    div(DT::DTOutput("table"), style = "font-size: 100%;")
+                    div(DT::dataTableOutput("table",width = "100%")
                     )
         ))
         )
+)
 
 # Define server logic required to draw a histogram
 server <- function(input, output) {
+    datasetInput <- reactive({
+        d <- datos
+        if (input$primers == "Primer 1" | input$primers == "" ){
+            d <- p1 
+        } else if (input$primers == "Primer 2"){
+            d <- p2
+        } else if (input$primers == "Primer 3"){
+            d <- p3
+        }
+        if (input$types != "") {
+            d  <- d[d$SSR_Type == input$types,]
+        }
+        d <- d[d$SSR_Size >= input$sizes[1] & d$SSR_Size <= input$sizes[2],]
+        d
+    })
     
+    # Table
+    output$table <- renderDataTable({datasetInput()}, 
+                             options = list(
+                                 columnDefs = list(list(className = 'dt-center', 
+                                                        targets = "_all")))
+                             )
     
-    
-    output$table <-  DT::renderDataTable({
-        DT::datatable({d <- datos
-                      if (input$primers == "Primer 1" | input$primers == "" ){
-                         d <- p1 
-                      } else if (input$primers == "Primer 2"){
-                         d <- p2
-                      } else if (input$primers == "Primer 3"){
-                          d <- p3
-                      }
-                      if (input$types != "") {
-                          d  <- d[d$SSR_Type == input$types,]
-                      }
-                      d <- d[d$SSR_Size >= input$sizes[1] & d$SSR_Size <= input$sizes[2],]
-                      d
-        })
-        })
-    
+    # Downloadable csv of selected dataset ----
+    output$downloadData <- downloadHandler(
+        filename = function() {
+            paste("Hvastatrix", input$primers,".xlsx", sep = "")
+        },
+        content = function(file) {
+            write_xlsx(datasetInput(), path = file)
+        }
+            
+    )
 }
 
 

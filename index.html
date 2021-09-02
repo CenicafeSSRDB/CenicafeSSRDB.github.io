@@ -8,426 +8,71 @@
 <meta name="generator" content="pandoc" />
 <meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
-
-
-
-<title>index.knit</title>
-
-<script src="site_libs/header-attrs-2.9/header-attrs.js"></script>
-<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<link href="site_libs/bootstrap-3.3.5/css/journal.min.css" rel="stylesheet" />
-<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
-<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
-<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
-<style>h1 {font-size: 34px;}
-       h1.title {font-size: 38px;}
-       h2 {font-size: 30px;}
-       h3 {font-size: 24px;}
-       h4 {font-size: 18px;}
-       h5 {font-size: 16px;}
-       h6 {font-size: 12px;}
-       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
-       pre:not([class]) { background-color: white }</style>
-<script src="site_libs/navigation-1.1/tabsets.js"></script>
-<link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
-<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
-<link href="site_libs/pagedtable-1.1/css/pagedtable.css" rel="stylesheet" />
-<script src="site_libs/pagedtable-1.1/js/pagedtable.js"></script>
-<!DOCTYPE html>
-
-<html>
-
-<head>
-
-<meta charset="utf-8" />
-<meta name="generator" content="pandoc" />
-<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
-
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
-
-<title>Navbar</title>
-
-<style>
-  
-</style>
-
-<link rel="stylesheet" href="estilos.css" type="text/css" />
-
-</head>
-
-
-<body>
-
-<div class="header">
-  
-  <div id="container">
-    <div style="width:15%;">
-      <img src="images/logo-cenicafe.svg" alt="">
-    </div>
-    <div class="CeniTitle" style="width: 70%;">
-      <div>
-      <p>Cenicafé DB</p>
-      </div>
-    </div>
-    <div style="width: 7%;">
-      <a href="javascript:history.back()">
-        <img src="images/back.png" alt="Back">
-      </a>
-    </div>
-    <div style="width: 7%;">
-      <a href="index.html" class="button">
-        <img src="images/home-button.svg" alt="Home">
-      </a>
-    </div>
-  </div>
-
-</div>
-
-</body>
-
-<style type="text/css">
-  code{white-space: pre-wrap;}
-  span.smallcaps{font-variant: small-caps;}
-  span.underline{text-decoration: underline;}
-  div.column{display: inline-block; vertical-align: top; width: 50%;}
-  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-  ul.task-list{list-style: none;}
-    </style>
-
-<style type="text/css">code{white-space: pre;}</style>
-<script type="text/javascript">
-if (window.hljs) {
-  hljs.configure({languages: []});
-  hljs.initHighlightingOnLoad();
-  if (document.readyState && document.readyState === "complete") {
-    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
-  }
-}
-</script>
-
-
-
-
-
-<link rel="stylesheet" href="estilos.css" type="text/css" />
-
-
-
-<style type = "text/css">
-.main-container {
-  max-width: 940px;
-  margin-left: auto;
-  margin-right: auto;
-}
-img {
-  max-width:100%;
-}
-.tabbed-pane {
-  padding-top: 12px;
-}
-.html-widget {
-  margin-bottom: 20px;
-}
-button.code-folding-btn:focus {
-  outline: none;
-}
-summary {
-  display: list-item;
-}
-pre code {
-  padding: 0;
-}
-</style>
-
-
-
-<!-- tabsets -->
-
-<style type="text/css">
-.tabset-dropdown > .nav-tabs {
-  display: inline-table;
-  max-height: 500px;
-  min-height: 44px;
-  overflow-y: auto;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-}
-
-.tabset-dropdown > .nav-tabs > li.active:before {
-  content: "";
-  font-family: 'Glyphicons Halflings';
-  display: inline-block;
-  padding: 10px;
-  border-right: 1px solid #ddd;
-}
-
-.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
-  content: "&#xe258;";
-  border: none;
-}
-
-.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
-  content: "";
-  font-family: 'Glyphicons Halflings';
-  display: inline-block;
-  padding: 10px;
-  border-right: 1px solid #ddd;
-}
-
-.tabset-dropdown > .nav-tabs > li.active {
-  display: block;
-}
-
-.tabset-dropdown > .nav-tabs > li > a,
-.tabset-dropdown > .nav-tabs > li > a:focus,
-.tabset-dropdown > .nav-tabs > li > a:hover {
-  border: none;
-  display: inline-block;
-  border-radius: 4px;
-  background-color: transparent;
-}
-
-.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
-  display: block;
-  float: none;
-}
-
-.tabset-dropdown > .nav-tabs > li {
-  display: none;
-}
-</style>
-
-<!-- code folding -->
-
-
-
-
-</head>
-
-<body>
-
-
-<div class="container-fluid main-container">
-
-
-
-<!DOCTYPE html>
-
-<!DOCTYPE html>
-
-<html>
-
-<head>
-
-<meta charset="utf-8" />
-<meta name="generator" content="pandoc" />
-<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
-
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
 
 <title>Index</title>
 
 <style>
-a:link, a:visited {
-  background-color: ##740404;
-  color: #ffffff;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  border-radius: 20px;
-}
-
-a:hover, a:active {
-  background-color: #E16684;
-}
-
-.dropbtn {
-  background-color: #ffffff;
-  color: white;
-  padding: 16px;
-  font-size: 16px;
-  border: none;
-  cursor: pointer;
-}
-
-.dropbtn:hover, .dropbtn:focus {
-  background-color: #ffffff;
-}
-
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f1f1f1;
-  min-width: 160px;
-  overflow: auto;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
-
-.dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
-
-.dropdown a:active {background-color: #E16684;}
-.dropdown a:hover {background-color: #9c0028}
-
-.show {display: block;}
-
+  
 </style>
 
-<link rel="stylesheet" href="styles.css" type="text/css" />
-
+<link rel="stylesheet" href="nav.css" type="text/css" />
+<link rel="stylesheet" href="index.css" type="text/css" />
 
 </head>
 
 <body>
-
-<div>
-<h1>Microsatellite DB</h1>
-</div>
-
-<div>
-<p>Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. 
-Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, 
-cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería 
-de textos y los mezcló de tal manera que logró hacer un libro de textos especimen. 
-No sólo sobrevivió 500 años, sino que tambien ingresó como texto de relleno en documentos electrónicos, 
-quedando esencialmente igual al original. Fue popularizado en los 60s con la creación de las hojas "Letraset", 
-las cuales contenian pasajes de Lorem Ipsum, y más recientemente con software de autoedición, como por ejemplo 
-Aldus PageMaker, el cual incluye versiones de Lorem Ipsum.</p>
-</div>
-
-<div>
-<h1>Roya CLR</h1>
-</div>
-
-<div id="container">
-<div style="height: 150px; width: 25%;">
-  <button onclick="myFunction()" class="dropbtn">
-  <a target="_blank" style="width: 250px;height: 250px;inline-block;">
-        <p style="text-align: center;text-shadow: 2px 2px 5px red;font-size: 70px;">1</p>
-        <p style="text-align: center; text-decoration: underline;text-shadow: 2px 2px 5px #E16684;font-size: 30px;">Specie</p>
-  </a>
-  </button>
-</div>
-<div class="dropdown" style="height: 150px; width: 30%;">
-  <button onclick="myFunction()" class="dropbtn">
-  <a target="_blank" style="width: 250px;height: 250px;inline-block;">
-        <p style="text-align: center;text-shadow: 2px 2px 5px red;font-size: 70px;">2</p>
-        <p style="text-align: center; text-decoration: underline;text-shadow: 2px 2px 5px #E16684;font-size: 30px;">Genomes</p>
-  </a>
-  </button>
-  <div id="myDropdown" class="dropdown-content">
-    <a class="Hemil" href="about.html">
-        <i>Hemileia vastatrix</i>
-    </a>
-  </div>
-</div>
-<div style="height: 150px;">
-  <button onclick="myFunction()" class="dropbtn">
-  <a target="_blank" style="width: 250px;height: 250px;inline-block;">
-    <p style="text-align: center;text-shadow: 2px 2px 5px red;font-size: 70px;">X</p>
-    <p style="text-align: center; text-decoration: underline;text-shadow: 2px 2px 5px #E16684;font-size: 30px;">Microsatellites</p>
-  </a>
-  </button>
-</div>
-</div>
-
-<script>
-/* When the user clicks on the button, 
-toggle between hiding and showing the dropdown content */
-function myFunction() {
-  document.getElementById("myDropdown").classList.toggle("show");
-}
-
-// Close the dropdown if the user clicks outside of it
-window.onclick = function(event) {
-  if (!event.target.matches('.dropbtn')) {
-    var dropdowns = document.getElementsByClassName("dropdown-content");
-    var i;
-    for (i = 0; i < dropdowns.length; i++) {
-      var openDropdown = dropdowns[i];
-      if (openDropdown.classList.contains('show')) {
-        openDropdown.classList.remove('show');
-      }
-    }
-  }
-}
-</script>
-
-</body>
-</html>
-
-<div id="header">
-
-
-
-
-</div>
-
-
-
-
-<div style="padding: 15px;" >
-<br>
-  <div style="position: absolute;">
-    <p>Copyright &copy; 2021 CENICAFÉ, Inc. All rights reserved.</p>
-  </div>
-</div>
-
-
-
-</div>
-
-<script>
-
-// add bootstrap table styles to pandoc tables
-function bootstrapStylePandocTables() {
-  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
-}
-$(document).ready(function () {
-  bootstrapStylePandocTables();
-});
-
-
-</script>
-
-<!-- tabsets -->
-
-<script>
-$(document).ready(function () {
-  window.buildTabsets("TOC");
-});
-
-$(document).ready(function () {
-  $('.tabset-dropdown > .nav-tabs > li').click(function () {
-    $(this).parent().toggleClass('nav-tabs-open');
-  });
-});
-</script>
-
-<!-- code folding -->
-
-
-<!-- dynamically load mathjax for compatibility with self-contained -->
-<script>
-  (function () {
-    var script = document.createElement("script");
-    script.type = "text/javascript";
-    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
-    document.getElementsByTagName("head")[0].appendChild(script);
-  })();
-</script>
-
-</body>
+  <header class="header">
+    <nav class="nav">
+      <img src="images/Logo-Cenicafe.svg" alt="" width="100">
+      <a href"#" class="logo nav-link">
+          Cenicafé DB
+      </a>
+      <ul class="nav-menu">
+        <li class="nav-menu-item">
+          <a href="javascript:history.back()" class="nav-menu-link nav-link">
+            <i class="fas fa-chevron-left"></i>
+          </a>
+        </li>
+        <li class="nav-menu-item">
+          <a href="index.html" class="nav-menu-link nav-link">
+            <i class="fas fa-home"></i>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <div class="texto-div">
+      <h1 class="texto-title">Microsatellite DB</h1>
+      <p class="texto">Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen. No sólo sobrevivió 500 años, sino que tambien ingresó como texto de relleno en documentos electrónicos, quedando esencialmente igual al original. Fue popularizado en los 60s con la creación de las hojas "Letraset", las cuales contenian pasajes de Lorem Ipsum, y más recientemente con software de autoedición, como por ejemplo Aldus PageMaker, el cual incluye versiones de Lorem Ipsum.</p>
+    </div>
+    <div class="grid-container">
+      <div class="grid-item" style="background-image: url("images/logo-cenicafe.svg")">
+        <ul class="button-type1">
+          <li class="number">1</li>
+          <li>Specie</li>
+        </ul>
+      </div>
+      <div class="grid-item">
+        <ul class="button-type1">
+          <li class="number">2</li>
+          <li>Genomes</li>
+        </ul>
+      </div>
+      <div class="grid-item">
+        <ul class="button-type1">
+          <li class="number">XXXX</li>
+          <li>Microsatellites</li>
+        </ul>
+      </div>
+    </div>
+  </main>
+  <footer>
+    
+  </footer>
+</body
 </html>
