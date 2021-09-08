@@ -1,0 +1,42 @@
+.grid-superior {
+  background-color: white;
+  height: 80px;
+  position: fixed;
+  width: 100%;
+  top: 80;
+  left: 0;
+}
+
+.nav-link1 {
+  color: black;
+  text-decoration: none;
+  margin: 0 auto;
+}
+
+.specie-title {
+  font-size: 30px;
+  font-weight: bold;
+  padding: 0 40px;
+  line-height: 80px;
+}
+
+.search {
+  display: flex;
+  margin-right: 40px;
+  list-style: none;
+}
+
+.specie-title{
+  position: relative;
+  font-size: 1.5vw;
+  left: 0;
+  top: 50%;
+}
+
+.nav-menu-item1 {
+  font-size: 45px;
+  margin: 0 10px;
+  line-height: 80px;
+  width: max-content;
+  margin: 0 auto;
+}
