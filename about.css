@@ -3,7 +3,7 @@
   height: 80px;
   position: fixed;
   width: 100%;
-  top: 80;
+  top: 80px;
   left: 0;
 }
 
@@ -39,4 +39,54 @@
   line-height: 80px;
   width: max-content;
   margin: 0 auto;
+}
+
+/*big-grid*/
+
+.big-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-auto-rows: minmax(200px, auto);
+  gap: 20px;
+  padding: 20px;
+  grid-auto-flow:dense;
+}
+
+/*left*/
+
+.grid-left {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-auto-rows: minmax(200px, auto);
+  padding: 20px;
+  height: 80px;
+  position: fixed;
+  width: 15%;
+  top: 200px;
+  left: 10%;
+  grid-auto-flow:dense;
+}
+
+.pag2{
+  color: white;
+  border-style: none;
+  background-attachment: fixed;
+  padding: 8px;
+  margin: none;
+  text-align: center;
+}
+
+/*left*/
+
+.grid-right {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-auto-rows: minmax(500px, auto);
+  padding: 20px;
+  height: 80px;
+  position: fixed;
+  width: 50%;
+  top: 200px;
+  left: 30%;
+  grid-auto-flow:dense;
 }
