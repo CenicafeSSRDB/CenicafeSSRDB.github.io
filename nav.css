@@ -65,27 +65,34 @@ body {
   color: #7c524f;
 }
 
+.imagen{
+  width: 120px;
+}
+
 @media (max-width: 768px) {
   body {
   padding-top: 70px;
   }
   
   .header {
-    height: 80px;
+    height: 60px;
   }
   
   .logo {
     font-size: 25px;
     padding: 0 20px;
-    line-height: 80px;
+    line-height: 60px;
   }
   
   .nav-menu {
-    margin-right: 20px;
+    margin-right: 5px;
   }
   
   .nav-menu-item {
-    font-size: 18px;
-    line-height: 80px;
+    font-size: 20px;
+    line-height: 60px;
+  }
+  .imagen{
+    width: 80px;
   }
 }
