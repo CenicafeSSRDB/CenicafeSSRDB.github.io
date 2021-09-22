@@ -80,7 +80,7 @@
 
 .grid-right {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   grid-auto-rows: minmax(500px, auto);
   padding: 20px;
   height: 80px;
@@ -93,9 +93,8 @@
 
 .bars {
   position: fixed;
-  width: 50%;
+  width: 0;
   top: 0;
-  left: 30%;
   margin: 0 auto;
 }
 
@@ -103,6 +102,5 @@
   position: fixed;
   width: 50%;
   top: 50%;
-  left: 30%;
   margin: 0 auto;
 }
