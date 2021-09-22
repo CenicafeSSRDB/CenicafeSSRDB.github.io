@@ -13,15 +13,6 @@ body {
   padding: 90px 20px 0;
 }
 
-.header {
-  background-color: #740404;
-  height: 80px;
-  position: fixed;
-  width: 100%;
-  top: 0;
-  left: 0;
-}
-
 .nav {
   display: flex;
   justify-content: space-between;
@@ -38,7 +29,7 @@ body {
   font-size: 30px;
   font-weight: bold;
   padding: 0 40px;
-  line-height: 80px;
+  line-height: 100px;
 }
 
 .nav-menu {
@@ -50,7 +41,7 @@ body {
 .nav-menu-item {
   font-size: 35px;
   margin: 0 10px;
-  line-height: 80px;
+  line-height: 100px;
   width: max-content;
 }
 
@@ -66,22 +57,15 @@ body {
 }
 
 .imagen{
-  width: 120px;
+  width: 150px;
 }
 
 @media (max-width: 768px) {
-  body {
-  padding-top: 70px;
-  }
-  
-  .header {
-    height: 60px;
-  }
   
   .logo {
     font-size: 5vw;
     padding: 0 10px;
-    line-height: 60px;
+    line-height: 80px;
   }
   
   .nav-menu {
@@ -90,9 +74,9 @@ body {
   
   .nav-menu-item {
     font-size: 5vw;
-    line-height: 60px;
+    line-height: 80px;
   }
   .imagen{
-    width: 80px;
+    width: 110px;
   }
 }

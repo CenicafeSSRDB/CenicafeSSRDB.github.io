@@ -1,10 +1,40 @@
-.grid-superior {
-  background-color: white;
-  height: 80px;
-  position: fixed;
-  width: 100%;
-  top: 80px;
-  left: 0;
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Minion";
+  src: url("MinionPro-BoldCapt.otf");
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+  font-family: "Minion";
+  max-width: 998px;
+  margin: 0 auto;
+}
+
+.grid-container>*{
+  box-shadow: -1px 1px 7px 0px rgba(0, 0, 0, 0.75);
+  border-radius: 4px;
+  text-align: center;
+}
+/*header*/
+
+.header{
+  grid-area: header;
+  background-color: #740404;
+}
+
+/*navbar*/
+
+.navbar{
+  grid-area: navbar;
 }
 
 .nav-link1 {
@@ -14,15 +44,13 @@
 }
 
 .specie-title {
-  font-size: 30px;
+  font-size: 2vw;
   font-weight: bold;
-  padding: 0 40px;
-  line-height: 80px;
+  padding: 0 20px;
 }
 
 .search {
   display: flex;
-  margin-right: 40px;
   list-style: none;
 }
 
@@ -30,32 +58,17 @@
 .nav-menu-item1 {
   font-size: 45px;
   margin: 0 10px;
-  line-height: 80px;
   width: max-content;
   margin: 0 auto;
 }
 
-/*big-grid*/
+/*sidebar*/
 
-.big-grid {
-  display: grid;
-  gap: 20px;
-  padding: 20px;
-  grid-auto-flow:dense;
-}
-
-/*left*/
-
-.grid-left {
-  display: grid;
+.sidebar{
+  grid-area: sidebar;
+  display: inline-grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   grid-auto-rows: minmax(200px, auto);
-  padding: 20px;
-  height: 80px;
-  position: fixed;
-  width: 15%;
-  top: 200px;
-  left: 10%;
   grid-auto-flow:dense;
 }
 
@@ -68,120 +81,40 @@
   text-align: center;
 }
 
-/*right*/
+/*main*/
 
-.grid-right {
+.main{
+  grid-area: main;
+  padding: 30px;
+  margin: 0 auto;
+}
+
+/*footer*/
+
+.footer{
+  grid-area: footer;
+}
+
+.grid-container{
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
-  grid-auto-rows: minmax(500px, auto);
-  padding: 20px;
-  height: 80px;
-  position: fixed;
-  width: 50%;
-  top: 200px;
-  left: 30%;
-  grid-auto-flow:dense;
+  gap: 10px;
+  grid-template: 
+    "header header" 100px
+    "navbar navbar" 70px
+    "sidebar main" auto
+    "footer footer" 40px /
+    200px auto;
 }
 
-.pie {
-  position: static;
-  margin: 0 auto;
+@media (max-width: 768px){
+  .grid-container{
+  display: grid;
+  gap: 10px;
+  grid-template: 
+    "header" 80px
+    "navbar" 60px
+    "sidebar" auto
+    "main" auto
+    "footer" 40px;
 }
-
-.bars {
-  position: static;
-  margin: 0 auto;
-}
-
-@media (max-width: 768px) {
-  
-  html {
-    height: 100%;
-  }
-  
-  body {
-  padding-top: 70px;
-  margin: 0 auto;
-  min-height: 100%;
-  }
-  
-  .grid-superior {
-  background-color: white;
-  height: 80px;
-  position: fixed;
-  width: 100%;
-  top: 80px;
-  left: 0;
-  }
-  
-  .nav-menu-item1 {
-    font-size: 30px;
-    margin: 0 10px;
-    line-height: 80px;
-    width: max-content;
-    margin: 0 auto;
-  }
-  
-  .specie-title {
-    font-size: 4vw;
-    font-weight: bold;
-    padding: 0 40px;
-    line-height: 80px;
-  }
-  
-  .search {
-    display: flex;
-    margin-right: 20px;
-    list-style: none;
-  }
-  
-  .nav-menu-item1 {
-    font-size: 45px;
-    margin: 0 10px;
-    line-height: 80px;
-    width: max-content;
-    margin: 0 auto;
-  }
-
-  /*big-grid*/
-  
-  .big-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    gap: 0;
-    padding: 10px;
-    overflow-y: auto;
-  }
-  
-  /*left*/
-  
-  .grid-left {
-    display: grid-right;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    grid-auto-rows: minmax(100px, auto);
-    padding: 10px 0;
-    height: 100px;
-    position: fixed;
-    width: 100%;
-    top: 170px;
-    left: 0;
-  }
-  
-  /*right*/
-  
-  .grid-right {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    grid-auto-rows: minmax(500px, auto);
-    gap: 10px;
-    padding: 0;
-    height: auto;
-    position: fixed;
-    width: 100%;
-    top: 410px;
-    left: 0;
-    align-self: center;
-    justify-self: center;
-  }
-
 }
