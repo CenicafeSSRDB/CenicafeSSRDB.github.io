@@ -71,13 +71,13 @@ body {
   }
   
   .header {
-    height: 60px;
+    height: 80px;
   }
   
   .logo {
     font-size: 25px;
     padding: 0 20px;
-    line-height: 60px;
+    line-height: 80px;
   }
   
   .nav-menu {
@@ -86,6 +86,6 @@ body {
   
   .nav-menu-item {
     font-size: 18px;
-    line-height: 60px;
+    line-height: 80px;
   }
 }
