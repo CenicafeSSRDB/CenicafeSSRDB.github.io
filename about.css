@@ -95,9 +95,14 @@
 
 @media (max-width: 768px) {
   
+  html {
+    height: 100%;
+  }
+  
   body {
   padding-top: 70px;
   margin: 0 auto;
+  min-height: 100%;
   }
   
   .grid-superior {
@@ -158,7 +163,7 @@
     height: 100px;
     position: fixed;
     width: 100%;
-    top: 200px;
+    top: 170px;
     left: 0;
   }
   
@@ -173,8 +178,10 @@
     height: auto;
     position: fixed;
     width: 100%;
-    top: 450px;
-    grid-auto-flow:column;
+    top: 410px;
+    left: 0;
+    align-self: center;
+    justify-self: center;
   }
 
 }
