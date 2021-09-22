@@ -1,16 +1,5 @@
-* {
-  margin: 0;
-  box-sizing: border-box;
-}
-
-@font-face {
-  font-family: "Minion";
-  src: url("MinionPro-BoldCapt.otf");
-}
-
 body {
   font-family: "Minion";
-  padding: 90px 20px 0;
 }
 
 .nav {
