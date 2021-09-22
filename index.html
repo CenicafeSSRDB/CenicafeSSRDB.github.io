@@ -14,14 +14,23 @@
 <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
 
-<title>Index</title>
+<title>General_date</title>
 
-<link rel="stylesheet" href="nav.css" type="text/css" />
+<!-- importante para graficos -->
+<script src="site_libs/jquery-3.5.1/jquery.min.js"></script> 
+<script src="site_libs/htmlwidgets-1.5.3/htmlwidgets.js"></script>
+<script src="site_libs/plotly-binding-4.9.4.1/plotly.js"></script>
+<script src="site_libs/crosstalk-1.1.1/js/crosstalk.min.js"></script>
+<link href="site_libs/plotly-htmlwidgets-css-1.57.1/plotly-htmlwidgets.css" rel="stylesheet" />
+<script src="site_libs/plotly-main-1.57.1/plotly-latest.min.js"></script>
+<script src="plotly.min.js"></script>
+
 <link rel="stylesheet" href="index.css" type="text/css" />
+<link rel="stylesheet" href="nav.css" type="text/css" />
 
 </head>
 
-<body>
+<body class="grid-container">
   <header class="header">
     <nav class="nav">
       <img src="images/Logo-Cenicafe.svg" alt="" class="imagen" >
@@ -42,9 +51,8 @@
       </ul>
     </nav>
   </header>
-  <main>
-    <div class="texto-div">
-      <div>
+  <nav class="navbar">
+    <div>
         <h1 class="texto-title">Microsatellite DB</h1><br/><hr/>
       </div>
       <div class="parrafo">
@@ -52,9 +60,9 @@
       <p class="texto">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
       <br/>
       </div>
-    </div>
-    <div class="grid-container">
-      <div class="a-btn" style="background-image: url(images/hoja.jpg)">
+  </nav>
+  <article class="main">
+    <div class="a-btn" style="background-image: url(images/hoja.jpg)">
           <span class="a-btn-text">
             <span class="number">1</span>
             <span>Specie</span>
@@ -88,10 +96,10 @@
             <span>Microsatellites</span>
          </span>
       </div>
-    </div>
-  </main>
-  <footer>
-    <hr>Copyright &copy; 2021 CENICAFÉ, Inc. All rights reserved.</hr>
+  </article>
+  <footer class="footer">
+    Copyright &copy; 2021 CENICAFÉ, Inc. All rights reserved.
   </footer>
-</body
+  
+</body>
 </html>

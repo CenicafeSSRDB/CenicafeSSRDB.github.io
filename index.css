@@ -1,15 +1,47 @@
 * {
-  box-sizing: border-box;
   margin: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Minion";
+  src: url("MinionPro-BoldCapt.otf");
+}
+
+html {
+  height: 100%;
 }
 
 body {
-  background-color: white;
-  max-width: 998px;
+  min-height: 100%;
+  font-family: "Minion";
+  max-width: 1200px;
   margin: 0 auto;
 }
 
-.grid-container {
+.grid-container>*{
+  text-align: center;
+  box-shadow: -1px 1px 7px 0px rgba(0, 0, 0, 0.75);
+  border-radius: 4px;
+}
+
+/*header*/
+
+.header{
+  grid-area: header;
+  background-color: #740404;
+}
+
+/*navbar*/
+
+.navbar{
+  grid-area: navbar;
+}
+
+/*main*/
+
+.main{
+  grid-area: main;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   grid-auto-rows: minmax(200px, auto);
@@ -171,7 +203,30 @@ body {
   font-size: 3rem;
 }
 
-@media (max-width: 768px){
-  
+/*footer*/
+
+.footer{
+  grid-area: footer;
 }
 
+.grid-container{
+  display: grid;
+  gap: 10px;
+  grid-template: 
+    "header" 100px
+    "navbar" auto
+    "main" auto
+    "footer" 40px;
+}
+
+@media (max-width: 768px){
+  .grid-container{
+  display: grid;
+  gap: 10px;
+  grid-template: 
+    "header" 80px
+    "navbar" 60px
+    "main" auto
+    "footer" 40px;
+}
+}
