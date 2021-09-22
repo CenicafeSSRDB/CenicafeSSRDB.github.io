@@ -90,3 +90,19 @@
   left: 30%;
   grid-auto-flow:dense;
 }
+
+.bars {
+  position: fixed;
+  width: 50%;
+  top: 0;
+  left: 30%;
+  margin: 0 auto;
+}
+
+.bars {
+  position: fixed;
+  width: 50%;
+  top: 50%;
+  left: 30%;
+  margin: 0 auto;
+}
