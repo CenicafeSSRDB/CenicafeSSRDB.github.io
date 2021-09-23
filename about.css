@@ -22,6 +22,7 @@ body {
 .grid-container>*{
   text-align: center;
 }
+
 /*header*/
 
 .header{
@@ -106,7 +107,7 @@ body {
     "header header" 100px
     ". navbar" 70px
     "sidebar main" auto
-    "footer footer" 40px /
+    "footer footer" 20px /
     200px auto;
 }
 

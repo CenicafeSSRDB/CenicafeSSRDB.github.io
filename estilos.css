@@ -1,83 +1,48 @@
-
-a.button {
-    -webkit-appearance: button;
-    -moz-appearance: button;
-    appearance: button;
-    
-    text-decoration: none;
-    color: initial;
-    border-radius: 10px;
+* {
+  margin: 0;
+  box-sizing: border-box;
 }
-
-/* unvisited link */
-a:link {
-  color: black;
-}
-
-/* visited link */
-a:visited {
-  color: #740404;
-}
-
-/* mouse over link */
-a:hover {
-  color: red;
-}
-
-/* selected link */
-a:active {
-  color: #740404;
-}
-
-/*HEAD*/
-/*Colores de la barra superior */
-.header{font-family: Verdana,Arial,sans-serif;
-  font-size: 15px;
-  color: #000000;
-  text-align: justify;
-  background-color: #740404;}
-  
-/* Titulo cenicafe */
 
 @font-face {
-  font-family: "ITC Gorilla";
-  src: url("itc-gorilla.otf");
+  font-family: "Minion";
+  src: url("MinionPro-BoldCapt.otf");
 }
 
-
-.CeniTitle{
-  font-family: 'ITC Gorilla', bold;
-  font-weight: normal;
-  font-size: 50px;
-  color: #ffffff;
-  display: table;
+html {
+  height: 100%;
 }
 
-.CeniTitle > div{
-  display: table-cell;
-  vertical-align: middle;
+body {
+  min-height: 100%;
+  font-family: "Minion";
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.grid-container>*{
   text-align: center;
 }
 
-.dropdown:hover .dropdown-content {
-  display: block;
+/*header*/
+
+.header{
+  grid-area: header;
+  background-color: #740404;
 }
 
-/*PAG1*/
-/* division pàgina quantity, divide los tres div de forma horizontal en partes iguales */
-#container {
-  display: flex;                  /* establish flex container */
-  flex-direction: row;            /* default value; can be omitted */
-  flex-wrap: nowrap;              /* default value; can be omitted */
-  justify-content: space-between; /* switched from default (flex-start, see below) */
+/*main*/
+
+.main{
+  grid-area: main;
+  box-shadow: -1px 1px 7px 0px rgba(0, 0, 0, 0.75);
+  border-radius: 4px;
 }
 
-/*PAG2*/
-.pag2{
-  color: white;
-  border-style: none;
-  background-attachment: fixed;
-  padding: 8px;
-  margin: none;
-  text-align: center;
+.grid-container{
+  display: grid;
+  gap: 10px;
+  grid-template: 
+    "header" 100px
+    "main" auto
+    "footer" 40px;
 }
