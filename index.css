@@ -33,14 +33,23 @@ body {
 /*formulario*/
 
 .formulario{
-  
+  grid-area: formulario;
+  display: inline-grid;
+  grid-template: 
+    "formName formName" 
+    "selector submit";
+  margin: 0;
+  grid-auto-flow:dense;
+  justify-content:center;
 }
 
-#formName{
+.formName{
+  grid-area: formName;
   font-size: 1.3vw;
 }
 
 .selector{
+  grid-area: selector;
   padding: 5px;
   border-radius: 4px;
   box-shadow: -1px 1px 7px 0px rgba(0, 0, 0, 0.75);
@@ -48,6 +57,7 @@ body {
 }
 
 .submit{
+  grid-area: submit;
   background: #740404;
   color: white;
   padding: 5px;
@@ -157,6 +167,8 @@ body {
   grid-area: footer;
 }
 
+/*general*/
+
 .grid-container{
   display: grid;
   gap: 10px;
@@ -169,6 +181,27 @@ body {
 
 @media (max-width: 768px){
   
+  /*formulario*/
+  
+  .formulario{
+  grid-area: formulario;
+  display: inline-grid;
+  grid-template: 
+    "formName selector submit";
+  margin: 0;
+  grid-auto-flow:dense;
+  justify-content:center;
+}
+  
+  .formName{
+  font-size: 5vw;
+  padding: 5px;
+  align-items: center;
+  justify-content:center;
+  }
+  
+  /*main*/
+  
   .main{
   grid-area: main;
   display: inline-grid;
@@ -177,7 +210,9 @@ body {
   gap: 5px;
   padding: 5px;
   grid-auto-flow:dense;
-}
+  }
+  
+  /*general*/
 
   .grid-container{
   display: grid;
@@ -185,9 +220,9 @@ body {
   grid-template: 
     "header" 80px
     "main" auto
-    "formulario" 60px
+    "formulario" 40px
     "navbar" auto
     "footer" 40px;
-}
+  }
 
 }
