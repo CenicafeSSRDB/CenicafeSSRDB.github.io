@@ -31,6 +31,7 @@
 </head>
 
 <body class="grid-container">
+  
   <header class="header">
     <nav class="nav">
       <img src="images/Logo-Cenicafe.svg" alt="" class="imagen" >
@@ -51,6 +52,17 @@
       </ul>
     </nav>
   </header>
+  
+  <form action="" method="get" class="formulario">
+        <label for="genomeSearch" id="formName">Genomes</label><br>
+        <select id="genomeSearch" name="q" class="selector">
+          <option value="" disable selected hidden>Select a genome</option>
+          <option value="HV1">Hemileia vastatrix</option>
+        </select>
+        <input type="submit" value="Search" class="submit">
+      </form>
+      </div>
+  
   <nav class="navbar">
     <div>
         <h1 id="textoTitle">Microsatellite DB</h1><br/><hr/>
@@ -67,16 +79,8 @@ Nunc et ligula vel augue vulputate vehicula id et ex. Duis ullamcorper orci vita
 Proin porttitor augue nec dui bibendum, quis semper metus porttitor. Quisque eget pharetra nisi, nec pulvinar massa. Ut efficitur odio purus, quis sagittis sapien dapibus ac. Sed quis porta mi. Fusce ut iaculis neque, non ornare magna. Fusce vel tempus sem. Curabitur sem augue, mollis ornare sem sit amet, ullamcorper feugiat nisl. Integer congue lobortis condimentum. Quisque tempus porttitor est. Mauris et diam leo. Suspendisse ultricies metus nec maximus sagittis. Etiam facilisis, est a consequat pellentesque, erat augue vehicula turpis, sed pellentesque nisl odio imperdiet nisi. Cras quis imperdiet ligula. In hac habitasse platea dictumst. In vehicula neque eget porttitor tincidunt. Nam imperdiet eu enim quis semper.
       </p>
       <br/>
-      <form action="" method="get" class="formulario">
-        <label for="genomeSearch" id="formName">Genomes</label><br>
-        <select id="genomeSearch" name="q" class="selector">
-          <option value="" disable selected hidden>Select a genome</option>
-          <option value="HV1">Hemileia vastatrix</option>
-        </select>
-        <input type="submit" value="Search" class="submit">
-      </form>
-      </div>
   </nav>
+  
   <article class="main">
     <div class="a-no-btn" style="background-image: url(images/hoja.jpg)">
           <span class="a-btn-text">
@@ -97,6 +101,7 @@ Proin porttitor augue nec dui bibendum, quis semper metus porttitor. Quisque ege
          </span>
       </div>
   </article>
+  
   <footer class="footer">
     Copyright &copy; 2021 CENICAFÉ, Inc. All rights reserved.
   </footer>

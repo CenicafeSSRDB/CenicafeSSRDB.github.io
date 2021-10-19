@@ -30,28 +30,10 @@ body {
   background-color: #740404;
 }
 
-/*navbar*/
-
-.navbar{
-  grid-area: navbar;
-  box-shadow: -1px 1px 7px 0px rgba(0, 0, 0, 0.75);
-  border-radius: 4px;
-  padding: 20px;
-}
-
-#textoTitle{
-  font-size: 2vw;
-}
-
-.texto{
-  text-align: justify;
-  padding-bottom: 10px;
-}
+/*formulario*/
 
 .formulario{
-  position: fixed;
-  bottom: 25vh;
-  left: 50vw;
+  
 }
 
 #formName{
@@ -78,6 +60,24 @@ body {
 .submit:hover{
   color: #7c524f;
   transform: scale(1.04);
+}
+
+/*navbar*/
+
+.navbar{
+  grid-area: navbar;
+  box-shadow: -1px 1px 7px 0px rgba(0, 0, 0, 0.75);
+  border-radius: 4px;
+  padding: 20px;
+}
+
+#textoTitle{
+  font-size: 2vw;
+}
+
+.texto{
+  text-align: justify;
+  padding-bottom: 10px;
 }
 
 /*main*/
@@ -162,6 +162,7 @@ body {
   gap: 10px;
   grid-template: 
     "header header" 100px
+    "formulario navbar" 50px
     "main navbar" auto
     "footer footer" 40px;
 }
@@ -184,6 +185,7 @@ body {
   grid-template: 
     "header" 80px
     "main" auto
+    "formulario" 60px
     "navbar" auto
     "footer" 40px;
 }
