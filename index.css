@@ -33,7 +33,7 @@ body {
 /*formulario*/
 
 .formulario{
-  position: relative;
+  grid-area: formulario;
 }
 
 .formulario select{
@@ -135,18 +135,6 @@ body {
     height: 200px;
 }
 
-.a-btn:active{
-    position:relative;
-    top:1px;
-    background:#898f96;
-    border-color:#80a9da;
-}
-
-.a-btn:hover {
-  filter: opacity(0.9);
-  transform: scale(1.04);
-}
-
 .a-no-btn:hover {
   filter: opacity(0.9);
   transform: scale(1.04);
@@ -180,50 +168,63 @@ body {
   /*formulario*/
   
   .formulario{
-  grid-area: formulario;
-  display: inline-grid;
-  grid-template: 
-    "formName selector submit";
-  margin: 0;
-  grid-auto-flow:dense;
-  justify-content:center;
-}
+    padding: 5px;
+  }
   
+  .formulario select{
+    font-size: 3.5vw;
+    margin: 0;
+  }
+  
+  .formulario .icon{
+    position: absolute;
+  }
+
   .formName{
-  font-size: 5vw;
-  align-items: center;
-  justify-content:center;
+    visibility:hidden;
+  }
+  
+  
+  /*navbar*/
+  
+  #textoTitle{
+    font-size: 5vw;
   }
   
   /*main*/
   
   .main{
-  grid-area: main;
-  display: inline-grid;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-  grid-auto-rows: minmax(50px, 100px);
-  gap: 5px;
-  padding: 5px;
-  grid-auto-flow:dense;
+    grid-area: main;
+    display: inline-grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-auto-rows: minmax(50px, 150px);
+    gap: 5px;
+    padding: 5px;
+    grid-auto-flow:dense;
   }
   
-  /*navbar*/
+  /*buttons*/
   
-  #textoTitle{
-  font-size: 5vw;
+  .a-no-btn {
+      margin:5px;
   }
   
-  /*general*/
-
-  .grid-container{
-  display: grid;
-  gap: 10px;
-  grid-template: 
-    "header" 80px
-    "main" auto
-    "formulario" 40px
-    "navbar" auto
-    "footer" 40px;
+  .a-btn-text{
+      font-size:18px;
+      height: auto;
   }
+  
+    /*general*/
+  
+    .grid-container{
+    display: grid;
+    gap: 10px;
+    grid-template: 
+      "header" 80px
+      "main" auto
+      "formulario" 60px
+      "navbar" auto
+      "footer" 40px;
+    }
 
 }

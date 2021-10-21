@@ -46,7 +46,7 @@ body {
 }
 
 .imagen{
-  width: 150px;
+  width: 12vw;
 }
 
 @media (max-width: 768px) {
@@ -66,6 +66,6 @@ body {
     line-height: 80px;
   }
   .imagen{
-    width: 110px;
+    width: 24vw;
   }
 }
