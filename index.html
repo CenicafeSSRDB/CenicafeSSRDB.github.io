@@ -44,17 +44,16 @@
     </nav>
   </header>
   
-  <form action="" method="get" class="formulario">
-        <label for="genomeSearch" class="formName">Genomes</label>
-        <select id="genomeSearch" name="q" class="selector">
+  <div class="box">
+    <div class="formulario">
+        <p class="formName">Genomes</p>
+        <span class="icon"><i class="fa fa-search"></i></span>
+        <select id="genomeSearch" name="q" onchange="location = this.value;">
           <option value="" disable selected hidden>Select a genome</option>
-          <option value="1">UNO</option>
-          <option value="1">DOS</option>
-          <option value="1">TRES</option>
+          <option value="about.html">Hemileia vastatrix</option>
         </select>
-        <input type="submit" value="Search" class="submit">
-      </form>
-      </div>
+    </div>
+  </div>
   
   <nav class="navbar">
     <div>
@@ -98,10 +97,6 @@ Proin porttitor augue nec dui bibendum, quis semper metus porttitor. Quisque ege
   <footer class="footer">
     Copyright &copy; 2021 CENICAFÉ, Inc. All rights reserved.
   </footer>
-
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js">
-  </script>
-  <script type="text/javascript" src="js/index.js"></script>
   
 </body>
 </html>

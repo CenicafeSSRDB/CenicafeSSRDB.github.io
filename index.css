@@ -33,14 +33,28 @@ body {
 /*formulario*/
 
 .formulario{
-  grid-area: formulario;
-  display: inline-grid;
-  grid-template: 
-    "formName formName" 
-    "selector submit";
-  margin: 0;
-  grid-auto-flow:dense;
-  justify-content:center;
+  position: relative;
+}
+
+.formulario select#genomeSearch{
+  border: none;
+  font-size: 1vw;
+  color: #63717f;
+  padding-left: 25px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  box-shadow: 1px 1px 3px 0px rgba(0, 0, 0, 0.75);
+}
+
+.formulario .icon{
+  position: absolute;
+  z-index: 1;
+  color: #63717f;
+  margin-top: 5px;
+  margin-left: 7px;
 }
 
 .formName{
@@ -49,29 +63,6 @@ body {
   padding: 5px;
 }
 
-.selector{
-  grid-area: selector;
-  padding: 5px;
-  border-radius: 4px;
-  box-shadow: -1px 1px 7px 0px rgba(0, 0, 0, 0.75);
-  border-style: none;
-}
-
-.submit{
-  grid-area: submit;
-  background: #740404;
-  color: white;
-  padding: 5px;
-  box-shadow: 2px 2px 5px #999;
-  border-radius: 4px;
-  justify-content:center;
-  transition: transform 0.3s ease-in-out;
-}
-
-.submit:hover{
-  color: #7c524f;
-  transform: scale(1.04);
-}
 
 /*navbar*/
 
