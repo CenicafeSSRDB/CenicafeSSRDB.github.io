@@ -1,5 +1,6 @@
 body {
   font-family: "Minion";
+  max-width: 1200px;
 }
 
 .nav {
@@ -14,6 +15,10 @@ body {
   text-decoration: none;
 }
 
+.imagen{
+  width: 12vw;
+}
+
 .logo {
   font-size: 30px;
   font-weight: bold;
@@ -25,13 +30,21 @@ body {
   display: flex;
   margin-right: 20px;
   list-style: none;
+  flex-direction: column;
+  background-color: #7c524f;
+  position: fixed;
+  right: 0;
+  top: 100px;
+  align-items: center;
+  padding: 0;
 }
 
 .nav-menu-item {
-  font-size: 35px;
+  font-size: 1.2vw;
   margin: 0 5px;
   line-height: 100px;
   width: max-content;
+  text-transform: uppercase;
 }
 
 .nav-menu-link {
@@ -43,29 +56,60 @@ body {
 .nav-menu-link:hover {
   background: none;
   color: #7c524f;
+  transition: 0.5s;
 }
 
-.imagen{
-  width: 12vw;
+.nav-toggle{
+  color: white;
+  background: none;
+  border: none;
+  font-size: 2vw;
+  padding: 0 20px;
+  line-height: 80px;
 }
 
 @media (max-width: 768px) {
   
   .logo {
-    font-size: 5vw;
-    padding: 0 10px;
+    font-size: 4vw;
+    padding: 0 5px;
     line-height: 80px;
   }
   
   .nav-menu {
-    margin-right: 5px;
+    margin-right: 20px;
+    left: 0px;
+    top: 80px;
+    width: 100%;
   }
   
   .nav-menu-item {
     font-size: 5vw;
     line-height: 80px;
   }
+  
   .imagen{
     width: 24vw;
+  }
+  
+  .nav-menu-link {
+    padding: 8px 12px;
+    border-radius: 3px;
+    transition: 0.5s;
+  }
+  
+  .nav-menu-link:hover {
+    background: none;
+    color: #7c524f;
+    transition: 0.5s;
+  }
+  
+  .nav-toggle{
+    color: white;
+    background: none;
+    border: none;
+    font-size: 2vw;
+    padding: 0 20px;
+    line-height: 80px;
   }
 }
