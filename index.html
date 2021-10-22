@@ -26,7 +26,7 @@
   <header class="header">
     <nav class="nav">
       <img src="images/Logo-Cenicafe.svg" alt="" class="imagen" >
-      <a href="#" class="logo nav-link">
+      <a href="https://www.cenicafe.org/" class="logo nav-link">
           Cenicafé DB
       </a>
       <ul class="nav-menu">
@@ -40,18 +40,34 @@
             <i class="fas fa-home"></i>
           </a>
         </li>
+        <li class="nav-menu-item">
+          <a href="index.html" class="nav-menu-link nav-link">
+            <i class="fas fa-bars"></i>
+          </a>
+        </li>
       </ul>
     </nav>
   </header>
   
-  <div class="formulario">
-      <p class="formName">Genomes</p>
-      <span class="icon"><i class="fa fa-search"></i></span>
-      <select class="sel" id="genomeSearch" name="q" onchange="location = this.value;">
-        <option value="">Select a genome</option>
-        <option value="about.html">Hemileia vastatrix</option>
-      </select>
+  <div class="especiesTitle">
+    <b>Species</b>
+    <br/>
+    <br/>
+    <hr/>
   </div>
+  
+  <article class="main">
+    <div class="a-btn" style="background-image: url(images/HV.jpg)" onclick="location.href='about.html';">
+      <div class="a-btn-text">
+        <b>Hemileia vastatrix</b>
+      </div>
+    </div>
+    <div class="a-btn" style="background-image: url(images/Csp.jpg)" onclick="location.href='lookfor.html';">
+      <div class="a-btn-text">
+        <b>Coffea sp</b>
+      </div>
+    </div>
+  </article>
   
   <nav class="navbar">
     <div>
@@ -71,26 +87,7 @@ Proin porttitor augue nec dui bibendum, quis semper metus porttitor. Quisque ege
       <br/>
   </nav>
   
-  <article class="main">
-    <div class="a-no-btn" style="background-image: url(images/hoja.jpg)">
-          <div class="a-btn-text">
-            <span class="number">1</span>
-            <span>Specie</span>
-          </div>
-      </div>
-      <div class="a-no-btn" style="background-image: url(images/adn1.jpg)">
-          <span class="a-btn-text">
-            <span class="number">2</span>
-            <span>Genomes</span>
-          </span>
-      </div>
-      <div class="a-no-btn" style="background-image: url(images/satelite.jpg)">
-          <span class="a-btn-text">
-            <span class="number">XXXX</span>
-            <span>Microsatellites</span>
-         </span>
-      </div>
-  </article>
+
   
   <footer class="footer">
     Copyright &copy; 2021 CENICAFÉ, Inc. All rights reserved.

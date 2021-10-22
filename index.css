@@ -26,44 +26,6 @@ body {
   background-color: #740404;
 }
 
-/*formulario*/
-
-.formulario{
-  grid-area: formulario;
-}
-
-.formulario select{
-  border: none;
-  font-size: 1vw;
-  color: #63717f;
-  padding-left: 25px;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
-  padding-top: 3px;
-  padding-bottom: 3px;
-  box-shadow: 1px 1px 3px 0px rgba(0, 0, 0, 0.75);
-}
-
-.formulario .icon{
-  position: absolute;
-  z-index: 1;
-  color: #63717f;
-  margin-top: 5px;
-  margin-left: 7px;
-}
-
-.sel option{
-  font-weight:normal;
-}
-
-.formName{
-  grid-area: formName;
-  font-size: 1.3vw;
-  padding: 5px;
-}
-
-
 /*navbar*/
 
 .navbar{
@@ -81,6 +43,13 @@ body {
   text-align: justify;
   padding-bottom: 10px;
 }
+/*Title*/
+
+.especiesTitle{
+  grid-area: especiesTitle;
+  font-size: 1.5vw;
+  padding: 20px;
+}
 
 /*main*/
 
@@ -97,7 +66,12 @@ body {
 
 /*buttons*/
 
-.a-no-btn {
+.link{
+  color: black;
+  text-decoration: none;
+}
+
+.a-btn {
     background:white;
     box-shadow: 2px 2px 5px #999;
     border-radius: 10px;
@@ -108,6 +82,7 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    border 2px solid;
 }
 
 .a-btn-text{
@@ -121,16 +96,12 @@ body {
     margin-right:auto;
     position: relative;
     top: 30%;
+    font-style: italic;
 }
 
-.a-no-btn:hover {
+.a-btn:hover {
   filter: opacity(0.9);
   transform: scale(1.04);
-}
-/* -------- */
-
-.number {
-  font-size: 3vw;
 }
 
 /*footer*/
@@ -146,32 +117,12 @@ body {
   gap: 10px;
   grid-template: 
     "header header" 100px
-    "formulario navbar" 50px
+    "especiesTitle navbar" auto
     "main navbar" auto
     "footer footer" 40px;
 }
 
 @media (max-width: 768px){
-  
-  /*formulario*/
-  
-  .formulario{
-    padding: 5px;
-  }
-  
-  .formulario select{
-    font-size: 3.5vw;
-    margin: 0;
-  }
-  
-  .formulario .icon{
-    position: absolute;
-  }
-
-  .formName{
-    visibility:hidden;
-  }
-  
   
   /*navbar*/
   
@@ -193,7 +144,7 @@ body {
   
   /*buttons*/
   
-  .a-no-btn {
+  .a-btn {
       margin:5px;
       background-position: 40% 0%;
   }
@@ -203,10 +154,6 @@ body {
       height: auto;
   }
   
-  .number {
-  font-size: 5vw;
-  }
-  
     /*general*/
   
     .grid-container{
@@ -214,8 +161,8 @@ body {
     gap: 10px;
     grid-template: 
       "header" 80px
+      "especiesTitle" auto
       "main" auto
-      "formulario" 60px
       "navbar" auto
       "footer" 40px;
     }
