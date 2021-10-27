@@ -27,25 +27,37 @@
 
 <link rel="stylesheet" href="about.css" type="text/css" />
 <link rel="stylesheet" href="nav.css" type="text/css" />
+<script defer src="nav.js"></script>
 
 </head>
 
 <body class="grid-container">
   <header class="header">
-    <nav class="nav">
+   <nav class="nav">
       <img src="images/Logo-Cenicafe.svg" alt="" class="imagen" >
-      <a href="#" class="logo nav-link">
+      <a href="https://www.cenicafe.org/" class="cenTitle">
           Cenicafé DB
       </a>
-      <ul class="nav-menu">
-        <li class="nav-menu-item">
-          <a href="javascript:history.back()" class="nav-menu-link nav-link">
-            <i class="fas fa-chevron-left"></i>
+      <button class="nav-toggle" aria-label="Open menu">
+        <i class="fas fa-bars"></i>
+      </button>
+      <ul class="nav-menu nav-menu-visible">
+        <li class="nav-menu-item" id="hm">
+          <a class="nav-menu-link" href="index.html">
+            <i class="fas fa-home"></i>
+            Home
           </a>
         </li>
         <li class="nav-menu-item">
-          <a href="index.html" class="nav-menu-link nav-link">
-            <i class="fas fa-home"></i>
+          <a class="nav-menu-link" href="team.html">
+            <i class="fas fa-id-badge"></i>
+            About us
+          </a>
+        </li>        
+        <li class="nav-menu-item">
+          <a class="nav-menu-link" href="contact_us.html">
+            <i class="fas fa-comments"></i>
+            Contact
           </a>
         </li>
       </ul>

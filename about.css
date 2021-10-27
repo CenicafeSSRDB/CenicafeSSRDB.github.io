@@ -3,14 +3,9 @@
   box-sizing: border-box;
 }
 
-@font-face {
-  font-family: "Minion";
-  src: url("MinionPro-BoldCapt.otf");
-}
-
 body {
   min-height: 100%;
-  font-family: "Minion";
+  font-family: Sans-Serif;
   max-width: 1200px;
   margin: 0 auto;
 }
