@@ -3,113 +3,95 @@ body {
   max-width: 1200px;
 }
 
-.nav {
-  display: flex;
-  justify-content: space-between;
-  max-width: 1200px;
-  margin: 0 auto;
+ul{
+  list-style: none;
+  padding: 0;
+  margin:0;
 }
 
-.nav-link {
+i {
   color: white;
-  text-decoration: none;
+  padding: 0 20px;
+}
+
+.header{
+  background-color: #740404;
 }
 
 .imagen{
-  width: 12vw;
+  width: 11vw;
+  line-height: 100px;
 }
 
-.logo {
+.cenTitle {
   font-size: 30px;
   font-weight: bold;
   padding: 0 40px;
   line-height: 100px;
 }
 
-.nav-menu {
+.nav-link {
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+}
+
+.nav {
   display: flex;
-  margin-right: 20px;
-  list-style: none;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 100px;
+}
+
+.navegacion{
+  display: flex;
+  margin: 0 auto;
   flex-direction: column;
-  background-color: #7c524f;
-  position: fixed;
-  right: 0;
-  top: 100px;
-  align-items: center;
+  line-height: 80px;
+  width: max-content;
+}
+
+.navegacion a{
+  padding: 1rem;
+  display: block;
+}
+
+.nav-menu{
+  position: relative;
+  font-size: 2vw;
+  height: 100px;
+  padding: 0 20px;
+}
+
+.nav-menu .submenu{
+  position: absolute;
+  wmargin: 0 auto;
+}
+
+#mn{
+  padding: 0 25px;
+}
+
+.nav-menu-item{
+  font-size: 1vw;
   padding: 0;
 }
 
-.nav-menu-item {
-  font-size: 1.2vw;
-  margin: 0 5px;
-  line-height: 100px;
-  width: max-content;
-  text-transform: uppercase;
+.nav-menu-item i{
+  padding: 0 5px;
 }
 
-.nav-menu-link {
-  padding: 8px 12px;
-  border-radius: 3px;
-  transition: 0.5s;
-}
-
-.nav-menu-link:hover {
-  background: none;
-  color: #7c524f;
-  transition: 0.5s;
-}
-
-.nav-toggle{
-  color: white;
-  background: none;
-  border: none;
-  font-size: 2vw;
-  padding: 0 20px;
-  line-height: 80px;
+.submenu{
+  background-color: #7c524f;
 }
 
 @media (max-width: 768px) {
-  
-  .logo {
-    font-size: 4vw;
-    padding: 0 5px;
-    line-height: 80px;
+  .navegacion{
+    flex-direction: row;
   }
   
-  .nav-menu {
-    margin-right: 20px;
-    left: 0px;
-    top: 80px;
-    width: 100%;
-  }
-  
-  .nav-menu-item {
-    font-size: 5vw;
-    line-height: 80px;
-  }
-  
-  .imagen{
-    width: 24vw;
-  }
-  
-  .nav-menu-link {
-    padding: 8px 12px;
-    border-radius: 3px;
-    transition: 0.5s;
-  }
-  
-  .nav-menu-link:hover {
-    background: none;
-    color: #7c524f;
-    transition: 0.5s;
-  }
-  
-  .nav-toggle{
-    color: white;
-    background: none;
-    border: none;
-    font-size: 2vw;
-    padding: 0 20px;
-    line-height: 80px;
+  .nav-menu{
+    
   }
 }

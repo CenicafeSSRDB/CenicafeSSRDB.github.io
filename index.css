@@ -43,6 +43,12 @@ body {
   text-align: justify;
   padding-bottom: 10px;
 }
+
+.texto i{
+ color: black;
+ padding: 0;
+}
+
 /*Title*/
 
 .especiesTitle{
