@@ -1,0 +1,44 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100%;
+  font-family: Sans-Serif;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.selfIntro{
+  padding: 10px 20px;
+}
+
+#textoTitle{
+  font-size: 1.7rem;
+  text-align: center;
+}
+
+.parrafo{
+  text-align: justify;
+}
+
+.ind{
+  list-style: none;
+  padding: 12px;
+  box-shadow: 2px 2px 5px #999;
+  border-radius: 10px;
+}
+
+.ind:hover {
+  filter: opacity(0.9);
+  transform: scale(1.04);
+}
+
+.principal{
+  font-size: 1.1rem;
+  font-weight: bold;  
+}
+
+
+
