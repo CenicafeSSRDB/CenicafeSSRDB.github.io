@@ -19,40 +19,41 @@
 <link rel="stylesheet" href="index.css" type="text/css" />
 <link rel="stylesheet" href="nav.css" type="text/css" />
 
+<script defer src="index.js"></script>
+
 </head>
 
 <body class="grid-container">
   
   <header class="header">
-    <nav class="nav">
+   <nav class="nav">
       <img src="images/Logo-Cenicafe.svg" alt="" class="imagen" >
-      <a href="https://www.cenicafe.org/" class="cenTitle nav-link">
+      <a href="https://www.cenicafe.org/" class="cenTitle">
           Cenicafé DB
       </a>
-      <div class="barra-nav">
-        <ul class="navegacion">
-        <li class="nav-menu" id="hm">
-          <a class="nav-link" href="#hm">
+      <button class="nav-toggle" aria-label="Open menu">
+        <i class="fas fa-bars"></i>
+      </button>
+      <ul class="nav-menu nav-menu-visible">
+        <li class="nav-menu-item" id="hm">
+          <a class="nav-menu-link" href="#">
             <i class="fas fa-home"></i>
+            Home
           </a>
         </li>
-        <li class="nav-menu" id="mn">
-          <a class="nav-link" href="#mn">
-            <i class="fas fa-bars"></i>
+        <li class="nav-menu-item">
+          <a class="nav-menu-link" href="#">
+            <i class="fas fa-id-badge"></i>
+            Team
           </a>
-          <div class="submenu">
-            <a class="nav-link nav-menu-item" href="#">
-              <i class="fas fa-id-badge"></i>
-              Team
-            </a>
-            <a class="nav-link nav-menu-item" href="#">
-              <i class="fas fa-comments"></i>
-              Contact us
-            </a>
-          </div>
+        </li>        
+        <li class="nav-menu-item">
+          <a class="nav-menu-link" href="#">
+            <i class="fas fa-comments"></i>
+            Contact us
+          </a>
         </li>
-        </ul>
-      </div>
+      </ul>
     </nav>
   </header>
   
