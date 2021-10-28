@@ -23,11 +23,17 @@ body {
   text-align: justify;
 }
 
+.individuo{
+  list-style: none;
+  box-shadow: 2px 2px 5px #999;
+  border-radius: 10px;
+  display: flex;
+  height: 12rem;
+}
+
 .ind{
   list-style: none;
   padding: 12px;
-  box-shadow: 2px 2px 5px #999;
-  border-radius: 10px;
 }
 
 .ind:hover {
@@ -38,6 +44,11 @@ body {
 .principal{
   font-size: 1.1rem;
   font-weight: bold;  
+}
+
+.footer{
+  padding: 12px;
+  text-align: center;
 }
 
 
