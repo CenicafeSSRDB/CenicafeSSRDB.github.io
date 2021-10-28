@@ -1,6 +1,6 @@
 * {
   margin: 0;
-  box-sizing: border-box;
+  box-sizing: content-box;
 }
 
 body {
@@ -23,26 +23,33 @@ body {
   text-align: justify;
 }
 
+
+
 .individuo{
   list-style: none;
   box-shadow: 2px 2px 5px #999;
   border-radius: 10px;
   display: flex;
-  height: 12rem;
+  height: 10rem;
+  width: max-content;
+  padding: 5px 20px;
+  margin: 0 auto;
 }
 
 .ind{
   list-style: none;
   padding: 12px;
+  height: max-content;
+  font-size: 1em;
 }
 
-.ind:hover {
+.individuo:hover {
   filter: opacity(0.9);
   transform: scale(1.04);
 }
 
 .principal{
-  font-size: 1.1rem;
+  font-size: 1.1em;
   font-weight: bold;  
 }
 
@@ -51,5 +58,12 @@ body {
   text-align: center;
 }
 
-
-
+@media (max-width: 768px){
+  .individuo{
+    width: 100%;
+    padding: 0;
+  }
+  .ind{
+    hyphens: auto;
+  }
+}
