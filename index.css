@@ -14,18 +14,16 @@ body {
 }
 
 /*header*/
-
-.header{
-  grid-area: header;
-  background-color: white;
-}
+ .header{
+   
+ }
 
 /*navbar*/
 
 .navbar{
   grid-area: navbar;
   box-shadow: -1px 1px 7px 0px rgba(0, 0, 0, 0.75);
-  border-radius: 4px;
+  border-radius: 1px;
   padding: 20px;
 }
 
@@ -74,7 +72,7 @@ body {
 .a-btn {
     background:white;
     box-shadow: 2px 2px 5px #999;
-    border-radius: 10px;
+    border-radius: 1px;
     text-decoration: none;
     
     transition: transform 0.3s ease-in-out;
@@ -107,19 +105,29 @@ body {
 /*footer*/
 
 .footer{
-  grid-area: footer;
+  background-color: #f28b4c;
+}
+
+.footer h3{
+  color: white;
+  padding-top: 20px;
 }
 
 /*general*/
 
+.mainContainer{
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template: 
+    "especiesTitle navbar" auto
+    "main navbar" auto;
+}
+
 .grid-container{
   display: grid;
   gap: 10px;
-  grid-template: 
-    "header header" 320px
-    "especiesTitle navbar" auto
-    "main navbar" auto
-    "footer footer" 40px;
+  grid-template-rows: auto auto 100px;
 }
 
 @media (max-width: 768px){
@@ -161,15 +169,22 @@ body {
   }
   
     /*general*/
+    
+    .mainContainer{
+      grid-area: mainContainer
+      gap: 10px
+      grid-template: 
+      "especiesTitle" auto
+      "main" auto
+      "navbar" auto;
+    }
   
     .grid-container{
     display: grid;
     gap: 10px;
     grid-template: 
-      "header" 80px
-      "especiesTitle" auto
-      "main" auto
-      "navbar" auto
+      "header" auto
+      "mainContainer" auto
       "footer" 40px;
     }
 
