@@ -85,6 +85,18 @@ body {
   height: max-content;
 }
 
+.imagenGen{
+  position: relative;
+  right: -35%;
+  bottom: -25%;
+  color: white;
+  background: none;
+  border: none;
+  font-size: 3rem;
+  padding: 0;
+  opacity: .5;
+}
+
 .pag2{
   color: white;
   border-style: none;
