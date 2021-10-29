@@ -24,14 +24,24 @@ body {
 .mainContainer{
   grid-area: mainContainer;
   max-width: 1200px;
+  gap: 10px;
   margin: 0 auto;
-  display: inline-grid;
-  grid-template-columns: 30% 1fr;
+  display: grid;
+  grid-template:
+    "logo logo" auto
+    "sidebar main" auto;
+}
+
+.logo{
+  grid-area: logo;
+  border: 1px solid;
+  padding: 10px;
 }
 
 /*sidebar*/
 
 .sidebar{
+  grid-area: sidebar;
   display:grid;
   grid-template-rows: 10% 1fr;
   border: 1px solid #1d846b;
@@ -40,13 +50,12 @@ body {
 
 .especies{
   display: inline-grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  grid-auto-rows: minmax(100px, 150px);
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  grid-auto-rows: minmax(100px, auto);
   gap: 20px;
   padding: 20px;
   grid-auto-flow:dense;
   margin: 0 20px;
-  box-shadow: 1px 1px 1px #999;
   text-shadow: 1px 1px 1px #999;
 }
 
@@ -97,11 +106,12 @@ body {
 /*main*/
 
 .main{
+  grid-area: main;
   padding: 20px;
 }
 
 #textoTitle{
-  font-size: 2vw;
+  font-size: 2rem;
   color: #bf3f1d;
 }
 
@@ -114,8 +124,6 @@ body {
  color: black;
  padding: 0;
 }
-
-
 
 /*footer*/
 
@@ -137,66 +145,23 @@ body {
   gap: 10px;
   grid-template:
     "header" auto
+    "logo" auto
     "mainContainer" auto
     "footer" auto;
 }
 
 @media (max-width: 768px){
-  
-  /*navbar*/
-  
-  #textoTitle{
-    font-size: 5vw;
-  }
-  
-  /*especiesTitle*/
-  
-  .especiesTitle{
-  font-size: 5vw;
-}
-  
-  /*main*/
-  
-  .main{
-    grid-area: main;
-    display: inline-grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-    grid-auto-rows: minmax(50px, 150px);
-    gap: 5px;
-    padding: 5px;
-    grid-auto-flow:dense;
-  }
-  
-  /*buttons*/
-  
-  .a-btn {
-      margin:5px;
-      background-position: 40% 0%;
-  }
-  
-  .a-btn-text{
-      font-size:3vw;
-      height: auto;
-  }
-  
-    /*general*/
-    
-    .mainContainer{
-      grid-area: mainContainer
-      gap: 10px
-      grid-template: 
-      "especiesTitle" auto
-      "main" auto
-      "navbar" auto;
-    }
-  
-    .grid-container{
-    display: grid;
-    gap: 10px;
-    grid-template: 
-      "header" auto
-      "mainContainer" auto
-      "footer" 40px;
-    }
 
+/*general*/
+  
+  .mainContainer{
+    grid-template:
+      "logo" auto
+      "sidebar" auto
+      "main" auto;
+  }
+  
+  .sidebar{
+    grid-template-rows: 20% 1fr;
+  }
 }
