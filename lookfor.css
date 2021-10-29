@@ -5,8 +5,7 @@
 
 body {
   min-height: 100%;
-  font-family: Sans-Serif;
-  max-width: 1200px;
+  font-family: Helvetica,Arial,sans-serif;
   margin: 0 auto;
 }
 
@@ -18,7 +17,6 @@ body {
 
 .header{
   grid-area: header;
-  background-color: #740404;
 }
 
 /*main*/
