@@ -70,6 +70,17 @@ body {
 .gType{
   box-shadow: -1px 1px 7px 0px rgba(0, 0, 0, 0.75);
   border-radius: 4px;
+  cursor: pointer;
+  font-size:1.3vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.gType:hover{
+  filter: opacity(0.9);
+  transform: scale(1.04);
 }
 
 /*sidebar*/
