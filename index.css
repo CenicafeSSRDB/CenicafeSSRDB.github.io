@@ -164,4 +164,8 @@ body {
   .sidebar{
     grid-template-rows: 20% 1fr;
   }
+  
+  .logo{
+    transform: scale(0.7);
+  }
 }
