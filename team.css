@@ -1,65 +1,169 @@
 * {
   margin: 0;
-  box-sizing: content-box;
+  box-sizing: border-box;
 }
 
 body {
   min-height: 100%;
-  font-family: Sans-Serif;
-  max-width: 1200px;
+  font-family: Helvetica,Arial,sans-serif;
   margin: 0 auto;
 }
 
+/*header*/
+
+.header{
+  grid-area: header;
+}
+
+/*main Container*/
+
+.mainContainer{
+  grid-area: mainContainer;
+  max-width: 1200px;
+  gap: 10px;
+  margin: 0 auto;
+  display: grid;
+  grid-template:
+    "logo" auto
+    "selfIntro" auto
+    "team" auto
+    "quote" auto;
+}
+
+/*logo*/
+
+.logo{
+  grid-area: logo;
+  border: 1px solid;
+  padding: 10px;
+}
+
+.logo img{
+  width: 100%;
+  height: auto;
+  max-width: 800px;
+}
+
+/*Selfintroduction*/
+
 .selfIntro{
+  grid-area: selfIntro;
   padding: 10px 20px;
 }
 
 #textoTitle{
-  font-size: 1.7rem;
-  text-align: center;
+  font-size: 1.5rem;
+  color: #bf3f1d;
+  text-transform: uppercase;
 }
 
 .parrafo{
   text-align: justify;
+  font-weight: bold;
+  font-size: 0.9rem;
 }
 
-.individuo{
-  list-style: none;
-  box-shadow: 2px 2px 5px #999;
-  border-radius: 10px;
-  display: flex;
-  height: 10rem;
-  width: max-content;
-  padding: 5px 20px;
-  margin: 0 auto;
+/*team*/
+
+.team{
+  grid-area: team;
+  gap: 10px;
+  padding: 10px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-auto-rows: minmax(250px, auto);
+  grid-auto-flow: dense;
 }
 
-.ind{
-  list-style: none;
-  padding: 12px;
-  height: 100%;
-  font-size: 1em;
-  ali: center;
+.member{
+  background-color: #dedddc;
+  display: grid;
+  grid-template-rows: 1fr auto;
+  border-radius: 1px;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+
+  transition: transform 0.3s ease-in-out;
 }
 
-.individuo:hover {
+.member:hover{
   filter: opacity(0.9);
   transform: scale(1.04);
 }
 
-.principal{
-  font-size: 1.1em;
-  font-weight: bold;  
+.fotogrph img{
+  width: 100%;
+  height: auto;
 }
 
+.personalInfo ul{
+  list-style: none;
+  padding: 0;
+  text-align: left;
+}
+
+.principal{
+  font-size: 1rem; 
+  color: #f28b4c;
+  text-transform: uppercase; 
+  font-weight: bold;
+}
+
+.secundario{
+  font-size: 0.9rem;
+  color: #43868e;
+  font-weight: bold;
+}
+
+.terciario{
+  font-size: 0.7rem;
+}
+
+.vacio{
+  font-size: 0.7rem;
+  color: transparent;
+}
+
+/*quote*/
+
+.quote{
+  grid-area: quote;
+  font-weight: bold;
+  font-size: 0.9rem;
+  padding: 20px;
+}
+
+/*footer*/
+
 .footer{
-  padding: 12px;
+  grid-area: footer;
+  background-color: #f28b4c;
+  box-shadow: 1px 1px 1px #999;
+}
+
+.footer h3{
+  color: white;
+  padding: 20px;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.grid-container{
   text-align: center;
+  gap: 10px;
+  grid-template:
+    "header" auto
+    "mainContainer" auto
+    "footer" auto;
 }
 
 @media (max-width: 768px){
-  .individuo{
-    width: 100%;
+  
+  .logo{
+    border: none;
+    padding: 10px;
   }
+
 }
 

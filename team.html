@@ -26,96 +26,135 @@
 <body class="grid-container">
   
     <header class="header">
-   <nav class="nav">
-      <img src="images/Logo-Cenicafe.svg" alt="" class="imagen" >
-      <a href="https://www.cenicafe.org/" class="cenTitle">
-          Cenicafé DB
-      </a>
-      <button class="nav-toggle" aria-label="Open menu">
-        <i class="fas fa-bars"></i>
-      </button>
-      <ul class="nav-menu nav-menu-visible">
-        <li class="nav-menu-item" id="hm">
-          <a class="nav-menu-link" href="index.html">
-            <i class="fas fa-home"></i>
-            Home
-          </a>
-        </li>
-        <li class="nav-menu-item">
-          <a class="nav-menu-link" href="team.html">
-            <i class="fas fa-id-badge"></i>
-            About us
-          </a>
-        </li>
-      </ul>
-    </nav>
+      <nav class="nav">
+        <button class="nav-toggle" aria-label="Open menu">
+           <i class="fas fa-bars"></i>
+         </button>
+        <ul class="nav-menu">
+           <li class="nav-menu-item">
+             <a class="nav-menu-link" href="index.html">
+               Home
+               <i class="fas fa-home nav-image"></i>
+             </a>
+           </li>
+           <li class="nav-menu-item">
+             <a class="nav-menu-link" href="team.html">
+               Workteam
+               <i class="fas fa-users nav-image"></i>
+             </a>
+           </li>
+           <li class="nav-menu-item">
+             <a class="nav-menu-link" href="contact_us.html">
+               Contact us
+               <i class="far fa-envelope-open nav-image"></i>
+             </a>
+           </li>
+         </ul>
+      </nav>
   </header>
   
-  <main class="selfIntro">
-    <div>
-        <h1 id="textoTitle">Who we are?</h1><br/><hr/>
+  <div class="mainContainer">
+
+    <div class="logo">
+      <img src="images/dibujo.svg" alt="Logo">
+    </div>
+
+    <div class="selfIntro">
+      <div>
+          <h1 id="textoTitle">Who we are?</h1><br/><hr/>
+        </div>
+        <div class="parrafo">
+          <p>
+            Cenicafé SSRdb, is an initiative of the Plant Pathology (Gustavo Marín-Ramírez) and Plant Breeding (Carlos Ernesto Maldonado Londoño) disciplines of the National Coffee Research Centre - Cenicafé-FNC, to facilitate the distribution of information related to microsatellite markers useful in genome mapping, characterisation of genetic material, population genetics and evolutionary studies in the Patosystem. Cenicafé-FNC, to facilitate the distribution of information related to microsatellite markers useful in genome mapping, characterisation of genetic material, population genetics and evolutionary studies in the Hemileia-Coffea Patosystem. In addition to promoting open science and reproducible research practices in plant pathology.
+          </p>
+          <br/>
+          <p>
+            Currently, our team is composed of the following researchers.
+          </p>
+        </div>
       </div>
-      <div class="parrafo">
-        <p>
-          Cenicafé SSRdb, is an initiative of the Plant Pathology (Gustavo Marín-Ramírez) and Plant Breeding (Carlos Ernesto Maldonado Londoño) disciplines of the National Coffee Research Centre - Cenicafé-FNC, to facilitate the distribution of information related to microsatellite markers useful in genome mapping, characterisation of genetic material, population genetics and evolutionary studies in the Patosystem. Cenicafé-FNC, to facilitate the distribution of information related to microsatellite markers useful in genome mapping, characterisation of genetic material, population genetics and evolutionary studies in the Hemileia-Coffea Patosystem. In addition to promoting open science and reproducible research practices in plant pathology.
-        </p>
-        <p>
-          Currently, our team is composed of the following researchers.
-        </p>
-      </div>
-  </main>
   
-  <div class="team">
-    <ul style="padding: 10px">
-      <li class="individuo">
-        <img src="images/gustavo.jpg" alt="Carlos Maldonado">
-        <ol class="ind">
-          <li class="principal">Gustavo Adolfo Marín-Ramírez</li>
-          <li class="principal">Founder Webmaster - Webdesigner</li>
-          <li class="secundario">gustavo.marin@cafedecolombia.com</li>
-          <li class="secundario">Research scientist I</li>
-          <li class="secundario">Discipline of Plant Pathology</li>
-          <li class="secundario">Centro Nacional de Investigaciones de Café- Cenicafé-FNC</li>
-          <li class="secundario">Manizales, Colombia.</li>
-        </ol>
-      </li>
-      <li class="individuo">
-        <img src="images/carlos.jpg" alt="Carlos Maldonado">
-        <ol class="ind">
-          <li class="principal">Carlos Ernesto Maldonado Londoño</li>
-          <li class="principal">Founder Webmaster</li>
-          <li class="secundario">Research scientist I</li>
-          <li class="secundario">Discipline of Plant Breeding</li>
-          <li class="secundario">Centro Nacional de Investigaciones de Café- Cenicafé-FNC</li>
-          <li class="secundario">Manizales, Colombia.</li>
-        </ol>
-      </li>
-      <li class="individuo">
-        <img src="images/andrea.jpg" alt="Andrea Fandiño">
-        <ol class="ind">
-          <li class="principal">Andrea Fandiño</li>
-          <li class="principal">Digital Media Editor - Webdesigner</li>
-          <li class="secundario">Discipline of Plant Pathology</li>
-          <li class="secundario">Centro Nacional de Investigaciones de Café- Cenicafé-FNC</li>
-          <li class="secundario">Manizales, Colombia.</li>
-        </ol>
-      </li>
-      <li class="individuo">
-        <img src="images/carlos.jpg" alt="Carlos Angel">
-        <ol class="ind">
-          <li class="principal">Carlos Ariel Ángel Calle</li>
-          <li class="principal">Editor</li>
-          <li class="secundario">Research scientist III</li>
-          <li class="secundario">Discipline of Plant Pathology</li>
-          <li class="secundario">Centro Nacional de Investigaciones de Café- Cenicafé-FNC</li>
-          <li class="secundario">Manizales, Colombia.</li>
-        </ol>
-      </li>
-    </ul>
-  </div>
+      <div class="team">
+        <div class="member" id="m1">
+          <div class="fotogrph">
+            <img src="images/gustavo.jpg" alt="Gustavo Marin">
+          </div>
+          <div class="personalInfo">
+            <ul>
+              <li class="principal">Gustavo Adolfo Marín-Ramírez</li>
+              <li class="secundario">Founder Webmaster - Webdesigner</li>
+              <li class="vacio">none</li>
+              <li class="terciario">gustavo.marin@cafedecolombia.com</li>
+              <li class="terciario">Research scientist I</li>
+              <li class="terciario">Discipline of Plant Pathology</li>
+              <li class="terciario">Centro Nacional de Investigaciones de Café- Cenicafé-FNC</li>
+              <li class="terciario">Manizales, Colombia.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="member" id="m2">
+          <div class="fotogrph">
+            <img src="images/carlos.jpg" alt="Carlos Maldonado">
+          </div>
+          <div class="personalInfo">
+            <ul>
+              <li class="principal">Carlos Ernesto Maldonado Londoño</li>
+              <li class="secundario">Founder Webmaster</li>
+              <li class="vacio">none</li>
+              <li class="terciario">Research scientist I</li>
+              <li class="terciario">Discipline of Plant Breeding</li>
+              <li class="terciario">Centro Nacional de Investigaciones de Café- Cenicafé-FNC</li>
+              <li class="terciario">Manizales, Colombia.</li>
+              <li class="vacio">none</li>
+            </ul>
+          </div>
+        </div>
+        <div class="member" id="m3">
+          <div class="fotogrph">
+            <img src="images/andrea.jpg" alt="Andrea Fandiño">
+          </div>
+          <div class="personalInfo">
+            <ul>
+              <li class="principal">Andrea Fandiño</li>
+              <li class="secundario">Digital Media Editor - Webdesigner</li>
+              <li class="vacio">none</li>
+              <li class="terciario">Discipline of Plant Pathology</li>
+              <li class="terciario">Centro Nacional de Investigaciones de Café- Cenicafé-FNC</li>
+              <li class="terciario">Manizales, Colombia.</li>
+              <li class="vacio">none</li>
+              <li class="vacio">none</li>
+            </ul>
+          </div>
+        </div>
+        <div class="member" id="m4">
+          <div class="fotogrph">
+            <img src="images/carlos.jpg" alt="Carlos Angel">
+          </div>
+          <div class="personalInfo">
+            <ul>
+              <li class="principal">Carlos Ariel Ángel Calle</li>
+              <li class="secundario">Editor</li>
+              <li class="vacio">none</li>
+              <li class="terciario">Research scientist III</li>
+              <li class="terciario">Discipline of Plant Pathology</li>
+              <li class="terciario">Centro Nacional de Investigaciones de Café- Cenicafé-FNC</li>
+              <li class="terciario">Manizales, Colombia.</li>
+              <li class="vacio">none</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="quote">
+        <b style="color: #43868e;">How to quote:</b> Marín-Ramírez <i>et al.</i>, 2022. cenicafe SSRdb: Una base de datos
+    para explorar microsatélites en el Patosistema Hemileia-Cafeto.
+      
+      </div>
+
+    </div>
+
   <footer class="footer">
-    <b>How to quote:</b> Marín-Ramírez <i>et al.</i>, 2022. cenicafe SSRdb: Una base de datos
-para explorar microsatélites en el Patosistema Hemileia-Cafeto.
+    <h3>Copyright &copy; 2021 CENICAFÉ, Inc. All rights reserved.</h3>
   </footer>  
   
 </body>
