@@ -72,7 +72,8 @@
      id="layer1"
      transform="translate(-4.3798007,-60.210015)">
     <g
-       id="g58">
+       id="g58"
+       transform="matrix(0.92386408,0,0,0.92386408,7.1750288,6.09605)">
       <text
          xml:space="preserve"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5778px;line-height:1.25;font-family:Haettenschweiler;-inkscape-font-specification:Haettenschweiler;fill:#028e60;fill-opacity:1;stroke:none;stroke-width:0.264583"

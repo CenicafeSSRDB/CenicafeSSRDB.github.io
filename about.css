@@ -146,11 +146,27 @@ body {
 
 .main{
   grid-area: main;
-  padding: 30px 100px;
   margin: 0 auto;
-  border: 2px solid #19674f;
+  gap:10px;
+}
+
+.graf{
+  width: 100%;
+  height: auto;
+  max-width: 450px;
+  padding: 0;
+}
+
+.pie{
+  border: 1px solid #19674f;
   box-shadow: -1px 1px 1px 0px rgba(0, 0, 0, 0.75);
-  border-radius: 4px;
+  border-radius: 1px;
+}
+
+.barras{
+  border: 1px solid #19674f;
+  box-shadow: -1px 1px 1px 0px rgba(0, 0, 0, 0.75);
+  border-radius: 1px;
 }
 
 /*footer*/
