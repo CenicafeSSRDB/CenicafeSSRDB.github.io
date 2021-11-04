@@ -70,62 +70,56 @@
       <img src="images/logo.png" alt="Logo">
     </div>
 
-    <nav class="navbar">
-      <ul>
-        <a href"#" class="specie-title nav-link1">
-            <i>Hemileia vastatrix</i>
-        </a>
-      </ul>
-      <ul class="search">
-        <a href="lookfor.html" class="nav-link1">
-          <li>Explore repeats</li>
-          <li class="nav-menu-item1">
-            <i class="far fa-eye"></i>
-          </li>
-        </a>
-      </ul>
-    </nav>
-    
-    <div class="genomes">
-      <div class="gType" onclick="location.href='about.html';">
-        <div class="a-btn-text">
-          <b>HV-XXXIII</b>
+    <div class="leftContainer">
+
+      <div class="genomes">
+        <div class="gType" onclick="location.href='about.html';">
+            <b>HV-XXXIII</b>
+        </div>
+        <div class="gType" onclick="location.href='lookfor.html';">
+            <b>HV</b>
         </div>
       </div>
-      <div class="gType" onclick="location.href='lookfor.html';">
-        <div class="a-btn-text">
-          <b>HV</b>
+
+      <div class="navbar">
+        <a href="lookfor.html">
+          Explore repeats <br/>
+          <i class="far fa-eye"></i>
+        </a>
+      </div>
+      
+      <div class="sidebar">
+        <div class="pag2" style="background: rgba(3, 117, 112, 255);">
+          <h1>547Mb</h1>
+          <h3>Genome Size</h3>
+          <i class="fas fa-ruler imagenGen"></i>
         </div>
+        <div class="pag2" style="background: rgba(0, 172, 137, 0.7);">
+          <h1>5,469</h1>
+          <h3>Microsatellites SSR</h3>
+          <i class="fas fa-vial imagenGen"></i>
+        </div>
+        <div class="pag2" style="background: rgba(114, 197, 157, 255);">
+          <h1>2%</h1>
+          <h3>Genome covered</h3>
+          <i class="fas fa-dna imagenGen"></i>
+        </div>     
       </div>
     </div>
     
-    <aside class="sidebar">
-      <div class="pag2" style="background: rgba(3, 117, 112, 255);">
-        <h1>547Mb</h1>
-        <h3>Genome Size</h3>
-        <i class="fas fa-ruler imagenGen"></i>
+    <div class="main">
+      <div class="specieTitle">
+        <i>Hemileia vastatrix</i>
       </div>
-      <div class="pag2" style="background: rgba(0, 172, 137, 0.7);">
-        <h1>5,469</h1>
-        <h3>Microsatellites SSR</h3>
-        <i class="fas fa-vial imagenGen"></i>
-      </div>
-      <div class="pag2" style="background: rgba(114, 197, 157, 255);">
-        <h1>2%</h1>
-        <h3>Genome covered</h3>
-        <i class="fas fa-dna imagenGen"></i>
-      </div>     
-    </aside>
-
-    
-    <article class="main">
       <div class="pie">
+        <div class="divTitle">Motiv Size Distribution</div>
         <div id="htmlwidget-21b323315c11bd3f6dda" style="width:672px;height:480px;" class="plotly html-widget graf"></div>
       </div>
       <div class="barras">
+        <div class="divTitle">Most Frequent Repeats</div>
         <div id="htmlwidget-6ff8b0eff05f35a17a2e" style="width:672px;height:480px;" class="plotly html-widget graf"></div>
       </div>
-    </article>
+    </div>
 
   </div>
 
