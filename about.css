@@ -37,16 +37,16 @@ body {
   grid-template-columns: repeat(auto-fit, minmax(200, 1fr));
   grid-auto-rows: minmax(50px, 100px);
   gap: 5px;
-  padding: 5px;
   grid-auto-flow:dense;
-  height: max-content;
+  
 }
 
 .gType{
   box-shadow: -1px 1px 7px 0px rgba(0, 0, 0, 0.75);
   border-radius: 4px;
   cursor: pointer;
-  font-size:1.3rem;
+  font-size:1.5rem;
+  font-weight: bold;
   background-color: #be401c;
   color: white;
 }
@@ -54,22 +54,6 @@ body {
 .gType:hover{
   filter: opacity(0.9);
   transform: scale(1.04);
-}
-
-/*navbar*/
-
-.navbar{
-  grid-area: navbar;
-}
-
-.navbar a{
-  text-decoration: none;
-  color: #1f4738;
-  font-size: 1.5rem;
-}
-
-.navbar i{
-  font-size: 3rem;
 }
 
 /*sidebar*/
@@ -109,26 +93,46 @@ body {
 
 .main{
   grid-area: main;
+  display: grid;
   margin: 0 auto;
-  gap:10px;
+  gap:5px;
+  align-items: center;
+  grid-template: 
+   "specieTitle specieTitle specieTitle navbar" auto
+   "pie pie barras barras" auto;
 }
 
 .specieTitle {
+  grid-area: specieTitle;
   font-size: 1.5rem;
   padding: 10px;
   font-weight: bold;
 }
 
+.navbar{
+  grid-area: navbar;
+}
+
+.navbar a{
+  text-decoration: none;
+  color: #1f4738;
+  font-size: 1.5rem;
+}
+
+.navbar i{
+  font-size: 3rem;
+}
+
 .pie{
+  grid-area: pie;
   margin: 0 auto;
-  padding: 10px;
   border: 1px solid #19674f;
   border-radius: 2px;
 }
 
 .barras{
+  grid-area: barras;
   margin: 0 auto;
-  padding: 10px;
   border: 1px solid #19674f;
   border-radius: 2px;
 }
@@ -218,5 +222,13 @@ body {
   .gType{
     font-size:1.3rem;
   }
+  
+  .main{
+  grid-template: 
+   "navbar" auto
+   "specieTitle" auto
+   "pie" auto
+   "barras" auto;
+}
 
 }
