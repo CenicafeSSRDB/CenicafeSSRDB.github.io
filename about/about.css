@@ -123,14 +123,14 @@ body {
   font-size: 3rem;
 }
 
-.pie{
+#pie{
   grid-area: pie;
   margin: 0 auto;
   border: 1px solid #19674f;
   border-radius: 2px;
 }
 
-.barras{
+#barras{
   grid-area: barras;
   margin: 0 auto;
   border: 1px solid #19674f;
