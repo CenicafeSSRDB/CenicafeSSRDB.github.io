@@ -123,18 +123,22 @@ body {
   font-size: 3rem;
 }
 
-#pie{
+#piePlot{
   grid-area: pie;
   margin: 0 auto;
   border: 1px solid #19674f;
   border-radius: 2px;
+  width:500px;
+  height:490px;
 }
 
-#barras{
+#barsPlot{
   grid-area: barras;
   margin: 0 auto;
   border: 1px solid #19674f;
   border-radius: 2px;
+  width:500px;
+  height:490px;
 }
 
 .divTitle{
