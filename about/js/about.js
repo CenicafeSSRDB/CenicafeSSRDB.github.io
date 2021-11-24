@@ -4,7 +4,7 @@
     meanContent=document.getElementsByClassName('place');
     
     var H1 = ["547Mb", "5469", "2%"];
-    var H2 = ["XXXMb", "XXXX", "X%"];
+    var H2 = ["718Mb", "XXXX", "X%"];
     
     var boxT = " "
     var pie1=document.getElementById('htmlwidget-21b323315c11bd3f6dda');
@@ -19,7 +19,7 @@
       pie1.style.display="block"
       bars1.style.display="block"
       
-    }else if(gen=='HVCENICAFE'){
+    }else if(gen=='HV-I'){
       
       for (i = 0; i < genValues.length; i++){
         boxT = genValues[i].getElementsByTagName('h1')
