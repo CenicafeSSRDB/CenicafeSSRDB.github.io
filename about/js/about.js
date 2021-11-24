@@ -7,6 +7,8 @@
     var H2 = ["XXXMb", "XXXX", "X%"];
     
     var boxT = " "
+    var pie1=document.getElementById('htmlwidget-21b323315c11bd3f6dda');
+    var bars1=document.getElementById('htmlwidget-6ff8b0eff05f35a17a2e');
     
     if(gen=='HV-XXXIII'){
     
@@ -14,8 +16,8 @@
         boxT = genValues[i].getElementsByTagName('h1')
         boxT[0].innerHTML = H1[i];
       }
-      
-      var pie=document.getElementById('htmlwidget-21b323315c11bd3f6dda');
+      pie1.style.display="block"
+      bars1.style.display="block"
       
     }else if(gen=='HVCENICAFE'){
       
@@ -24,9 +26,8 @@
         boxT[0].innerHTML = H2[i];
       }
       
-      var pie=document.getElementById('htmlwidget-21b323315c11bd3f6dda');
-      var bars=document.getElementById('htmlwidget-6ff8b0eff05f35a17a2e');
-      
+      pie1.style.display="none"
+      bars1.style.display="none"
     }
     
   }
