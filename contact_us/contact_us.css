@@ -53,6 +53,7 @@ span{
   margin: 0 auto;
   border: 1px solid #1d846b;
   width: fit-content;
+  border-radius: 4px;
   box-shadow: 1px 1px 1px #999;
 }
 
@@ -63,6 +64,7 @@ form{
   gap: 5px;
   font-weight: bold;
   font-size: 1rem;
+  padding: 10px;
 }
 
 #star{
@@ -70,6 +72,29 @@ form{
   color: white;
   width: 100%;
   padding: 5px;
+}
+
+input{
+  border-color: #dedddc;
+  border-radius: 4px;
+}
+
+input:focus{
+  border: 2px solid #555;
+}
+
+textarea{
+  border-color: #dedddc;
+}
+
+input[type=button], input[type=submit], input[type=reset]{
+  background-color: #1d846b;
+  border: none;
+  padding: 5px;
+  box-shadow: 1px 1px 1px #999;
+  text-decoration: none;
+  cursor: pointer;
+  color: white;
 }
 
 
@@ -87,6 +112,8 @@ form{
   font-weight: bold;
   font-size: 0.9rem;
 }
+
+/*all*/
 
 .grid-container{
   text-align: center;

@@ -58,25 +58,24 @@
     <div class="logo">
       <img src="../images/logo.png" alt="Logo">
     </div>
-    </div>
     <div class="formulario">
-      <form id="form" action="https://formspree.io/f/xeqnoaea"
-  method="POST" class="form">
-        <div  id="star">
+      <div  id="star">
           <p>Please fill in the form</p>
         </div>
-        
+      <form id="form" action="https://formspree.io/f/xeqnoaea"
+  method="POST" class="form">
         <label for="name">Name<span>*</span></label>
-        <input name="name" required type="text" id="name" placeholder="John Doe">
+        <input name="name" type="text" id="name" placeholder="John Doe" required>
         <label for="email">Email<span>*</span></label>
-        <input name="email" id="email" type="text" placeholder="name@mail.com">
+        <input name="email" id="email" type="text" placeholder="name@mail.com" required>
         <label for="message">Message</label>
         <textarea name="message" id="message" cols="30" rows="10"></textarea>
-        <button type="submit">Send</button>
+        <input type="submit" value="Send">
       </form>
     </div>
     
     </br>
+  </div>
 
   <footer class="footer">
     <h3>Copyright &copy; 2021 CENICAFÉ, Inc. All rights reserved.</h3>
