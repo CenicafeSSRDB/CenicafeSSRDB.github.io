@@ -50,19 +50,26 @@ span{
 
 .formulario{
   grid-area: formulario;
-  padding: 10px;
   margin: 0 auto;
-  background-color: #dedddc;
+  border: 1px solid #1d846b;
   width: fit-content;
+  box-shadow: 1px 1px 1px #999;
 }
 
 form{
   display: flex;
   flex-direction: column;
-  padding: 10px;
   align-items: center;
   gap: 5px;
   font-weight: bold;
+  font-size: 1rem;
+}
+
+#star{
+  background-color: #1d846b;
+  color: white;
+  width: 100%;
+  padding: 5px;
 }
 
 
