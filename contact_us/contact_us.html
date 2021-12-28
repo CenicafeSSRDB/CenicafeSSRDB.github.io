@@ -60,32 +60,46 @@
     </div>
     </div>
     <div class="formulario">
-      <form id="form" action="" class="form">
+      <form id="form" action="https://formspree.io/f/xeqnoaea"
+  method="POST" class="form">
         <label for="name">Name<span>*</span></label>
         <input name="name" required type="text" id="name" placeholder="John Doe">
-        <label for="mail">Email<span>*</span></label>
-        <input name="mail" id="mail" type="text" placeholder="name@mail.com">
+        <label for="email">Email<span>*</span></label>
+        <input name="email" id="email" type="text" placeholder="name@mail.com">
         <label for="message">Message</label>
         <textarea name="message" id="message" cols="30" rows="10"></textarea>
         <button type="submit">Send</button>
       </form>
+      <a href="mailto:andrea.fandino@cafedecolombia.com" id="trick">mail</a>
     </div>
 
   <footer class="footer">
     <h3>Copyright &copy; 2021 CENICAFÉ, Inc. All rights reserved.</h3>
   </footer> 
 
-  <script>
+ <script>
     
     const $form = document.querySelector("#form")
     
     $form.addEventListener("submit", handleSubmit)
     
-    function  handleSubmit(event) {
+    async function  handleSubmit(event) {
       event.preventDefault()
+      const form = new FormData(this)
+     const response = await fetch(this.action, {
+        method: this.method,
+        body: form,
+        headers: {
+          'Accept': 'application/json'
+        }
+      })
+      if(response.ok) {
+        this.reset()
+        alert("Thanks for your message")
+      }
     }
     
-  </script>
+ </script>
 
 </body>
 </html>
