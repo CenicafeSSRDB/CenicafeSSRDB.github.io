@@ -9,6 +9,10 @@ body {
   margin: 0 auto;
 }
 
+span{
+  color: red;
+}
+
 /*header*/
 
 .header{
@@ -24,7 +28,8 @@ body {
   margin: 0 auto;
   display: grid;
   grid-template:
-    "logo" auto;
+    "logo" auto
+    "formulario" auto;
 }
 
 /*logo*/
@@ -39,6 +44,25 @@ body {
   width: 100%;
   height: auto;
   max-width: 800px;
+}
+
+/*formulario*/
+
+.formulario{
+  grid-area: formulario;
+  padding: 10px;
+  margin: 0 auto;
+  background-color: #dedddc;
+  width: fit-content;
+}
+
+form{
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  align-items: center;
+  gap: 5px;
+  font-weight: bold;
 }
 
 /*footer*/

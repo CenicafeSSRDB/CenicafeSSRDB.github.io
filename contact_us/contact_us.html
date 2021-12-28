@@ -58,11 +58,34 @@
     <div class="logo">
       <img src="../images/logo.png" alt="Logo">
     </div>
-  </div>
+    </div>
+    <div class="formulario">
+      <form id="form" action="" class="form">
+        <label for="name">Name<span>*</span></label>
+        <input name="name" required type="text" id="name" placeholder="John Doe">
+        <label for="mail">Email<span>*</span></label>
+        <input name="mail" id="mail" type="text" placeholder="name@mail.com">
+        <label for="message">Message</label>
+        <textarea name="message" id="message" cols="30" rows="10"></textarea>
+        <button type="submit">Send</button>
+      </form>
+    </div>
 
   <footer class="footer">
     <h3>Copyright &copy; 2021 CENICAFÉ, Inc. All rights reserved.</h3>
   </footer> 
+
+  <script>
+    
+    const $form = document.querySelector("#form")
+    
+    $form.addEventListener("submit", handleSubmit)
+    
+    function  handleSubmit(event) {
+      event.preventDefault()
+    }
+    
+  </script>
 
 </body>
 </html>
